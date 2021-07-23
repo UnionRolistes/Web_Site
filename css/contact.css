@@ -1,0 +1,22 @@
+.URimgPrez{
+    width: 80%;
+    margin-left: 11%;
+}
+
+
+/*Pour le responsive et affichage mobile :*/
+@-ms-viewport {
+    width: device-width;
+}
+  
+  
+@media screen and (max-width:900px){
+    /* Largeur en dessous de laquelle l'image devient difficilement lisible */
+  
+    .URimgPrez{
+        width: 75vw;
+        margin-left: 5%;
+    }
+}
+
+    

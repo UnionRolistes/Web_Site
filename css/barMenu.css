@@ -1,0 +1,109 @@
+
+/*Bouton à 3 traits*/
+
+.menu{
+    width:40px;
+    height:30px;
+
+    display:block;
+    border:2px solid #fff;
+    border-radius:3px;
+    position:fixed;
+    left:30px;
+    top:40px;
+    text-decoration:none;
+}
+.menu:after{
+    content:"";
+    display:block;
+    width:20px;
+    height:3px;
+    background:#fff;
+    position:absolute;
+    margin:0 auto;
+    top:5px;
+    left:0;
+    right:0;
+    box-shadow:0 8px, 0 16px;
+}
+.menu:hover{
+    border: 2px solid gold;
+}
+
+
+nav{
+    width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+
+    width:15vw;
+}
+
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: rgba(255, 255, 255, 0.849);
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+
+    top:-18px;
+}
+nav > ul li:hover .sous{
+    display: block; /*Fait apparaitre le menu déroulant*/
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+    background-color: #23272A;
+}
+.sous a:hover{
+    border-bottom: none;
+   /* background-color: RGBa(200,200,200,0.1);*/
+   background-color: #2C2F33;
+}
+.deroulant > a::after{
+    font-size: 12px;
+}
+
+/*Pour les mobiles, on clique pour faire apparaitre*/
+nav > ul li:hover .sous, nav > ul li:active .sous{
+    display: block;
+}

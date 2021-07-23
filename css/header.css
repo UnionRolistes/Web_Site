@@ -1,0 +1,99 @@
+@import url("barMenu.css"); /* Menu déroulant */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i'); /*Police d'écriture*/
+
+html,body{
+    margin:0;
+    height:120%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header{
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    height:50vw;
+    min-height:400px;
+    max-height:550px;
+    min-width:auto;
+    color:#eee;
+    
+    /*Pour enlever les bords gris en haut de la fenetre*/
+    margin:-20px;
+    margin-bottom:0;
+}
+.header:after{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:-1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+}
+.header:before{
+    content:"";
+    width:100%;
+    height:200%;
+    position:absolute;
+    top:0;
+    left:0;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translateZ(0); 
+      backface-visibility: hidden;
+      scale(1.0, 1.0);
+      transform: translateZ(0);
+    background:#1B2030 url('../img/ur-bl2.png') 50% 0 no-repeat; /*Image de fond, personnalisable*/
+    background-size:25%;
+    background-attachment:fixed;
+    animation: grow 360s  linear 10ms infinite;
+    transition:all 0.4s ease-in-out;
+    z-index:-2;
+}
+.header a{
+    color:#eee;
+}
+.info{
+    flex: 0 0 auto;
+    width:50%;
+}
+.info{
+    width:100%;
+    padding:15% 10% 0 10%;
+    text-align:center;
+    text-shadow:0 2px 3px rgba(0,0,0,0.2);
+}
+.info h4, .meta{
+    font-size:0.7em;
+}
+
+
+/*Pour le responsive et affichage mobile :*/
+@-ms-viewport {
+    width: device-width;
+}
+  
+@media screen and (min-width:840px) and (max-width:1281px){
+    /* Pour les ecrans de moins de 1281 pixels de large (correspond aux telephones HD en mode portrait)*/
+  
+    .header:before{
+        background-size:30vw;
+    }
+}
+@media screen and (min-width:580px) and (max-width:840px){
+    /* Pour les ecrans de moins de 840 pixels de large */
+  
+    .header:before{
+        background-size:35vw;
+    }
+}
+@media screen and (max-width:580px){
+  
+    .header:before{
+        background-size:45vw;
+    }
+}

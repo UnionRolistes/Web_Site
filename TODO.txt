@@ -1,0 +1,5 @@
+Bugs :
+RAS pour l'instant :)
+
+Ajouts potentiels :
+- Page boutique affichant les goodies en vente
