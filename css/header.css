@@ -97,3 +97,16 @@ html,body{
         background-size:45vw;
     }
 }
+
+@media screen and (max-width:450px){
+
+    .table1{
+        font-size: 14px;     
+        width: 200px;
+    }
+    /*Cadre : */
+    #UR {
+    width: 95%; /*Taille horizontale du formulaire*/
+    margin-left: 5%;
+  }
+}

@@ -1,2 +1,5 @@
+- Changelog for v0.1.1 (2021-07-29)
+    * Changed footer
+
 - Changelog for v0.1.0 (2021-07-23)
     * Prototype page Web. Contient une section de présentation, de prestations et de dons

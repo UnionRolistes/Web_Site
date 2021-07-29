@@ -113,3 +113,11 @@ table.table1{
         /*width: 80%;*/
     }
 }
+
+@media screen and (max-width:450px){
+
+    .table1{
+        font-size: 14px;     
+        width: 200px;
+    }
+}
