@@ -94,19 +94,27 @@ html,body{
 @media screen and (max-width:580px){
   
     .header:before{
-        background-size:45vw;
+        background-size:50vw;
     }
 }
 
 @media screen and (max-width:450px){
-
-    .table1{
-        font-size: 14px;     
-        width: 200px;
+  
+    .header:before{
+        background-size:60vw;
     }
-    /*Cadre : */
-    #UR {
-    width: 95%; /*Taille horizontale du formulaire*/
-    margin-left: 5%;
-  }
+}
+
+@media screen and (max-width:400px){
+  
+    .header:before{
+        background-size:70vw;
+    }
+}
+
+@media screen and (max-width:325px){
+  
+    .header:before{
+        background-size:80vw;
+    }
 }

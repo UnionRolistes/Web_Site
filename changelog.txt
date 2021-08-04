@@ -1,3 +1,7 @@
+- Changelog for v0.2.1 (2021-08-04)
+    * Added transactions fees
+    * Added social media links
+
 - Changelog for v0.2.0 (2021-08-03)
     * Changed footer
     * Changed files structure for easier install

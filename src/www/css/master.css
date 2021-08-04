@@ -36,3 +36,18 @@ text-align: center;
 }
 
 a{ text-decoration: none; }
+
+
+/*Pour le responsive et affichage mobile :*/
+@-ms-viewport {
+  width: device-width;
+}
+
+@media screen and (max-width:450px){
+
+  /*Cadre : */
+  #UR {
+  width: 95%; /*Taille horizontale du formulaire*/
+  margin-left: 5%;
+}
+}

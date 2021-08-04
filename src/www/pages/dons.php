@@ -18,9 +18,9 @@
 	<tbody>
 		<tr>
 			<th scope="row">Frais</th>
-			<td>1 %</td>
-			<td>1 %</td>
-			<td>1 %</td>
+			<td>1,4%</td>
+			<td>0%</td>
+			<td>2%~4%</td>
 			<td>1 %</td>
             <td>1 %</td>
 		</tr>
@@ -35,7 +35,7 @@
         <tr>
 			<th scope="row">Faire un don</th>
 			<td><a href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS"><img src="img/paypalLogo.png" alt="Paypal" title="Paypal" class="logo"></a></td>
-			<td><a href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS"><img src="img/helloAssoLogo.png" alt="HelloAsso" title="HelloAsso" class="logo" id="helloAssoLogo"></a></td>
+			<td><a href="https://www.helloasso.com/associations/union-des-rolistes/formulaires/1/widget"><img src="img/helloAssoLogo.png" alt="HelloAsso" title="HelloAsso" class="logo" id="helloAssoLogo"></a></td>
 			<td><a href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS"><img src="img/leetchiLogo.png" alt="Leetchi" title="Leetchi" class="logo" id="leetchiLogo"></a></td>
 			<td><a href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS"><img src="img/patreonLogo.png" alt="Patreon" title="Patreon" class="logo" id="patreonLogo"></a></td>
             <td><a href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS"><img src="img/bitPayLogo.png" alt="BitPay" title="BitPay" class="logo" id="bitPayLogo"></a></td>
