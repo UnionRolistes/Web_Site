@@ -6,3 +6,14 @@ III - Des liens vers nos différentes plateformes de dons
 + IV - (Prochainement) Un lien vers notre boutique de goodies
 
 Pour une utilisation des modules sur d'autres sites, vous trouverez des informations sur les dépendances commentées dans le code
+
+
+# Installation
+Pour une 1ère installation : 
+"cd /usr/local/src && sudo git clone https://github.com/UnionRolistes/Bot_Base && cd Bot_Base && sudo bash updateBot.sh"
+
+sudo nano /etc/apache2/sites-available/300-UR_Site.conf --> Remplacer "serverName site.unionrolistes.fr" (ligne 9) par la redirection saisie sur votre hébergeur en ligne
+
+
+Pour une mise à jour :
+"cd /usr/local/src/Bot_Base && sudo git checkout . && sudo git pull && sudo bash updateBot.sh"
