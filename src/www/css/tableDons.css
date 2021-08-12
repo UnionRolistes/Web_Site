@@ -16,7 +16,7 @@ table.table1{
     font-style: normal;
     border-collapse:separate;
     
-    width: 100%;
+    width: 80%;
     margin-left: -20px;
 }
     
@@ -84,10 +84,7 @@ table.table1{
     height: 2em;
     width: 2.7em;
 }
-#leetchiLogo{
-    height: 2.5em;
-    width: 3em;
-}
+
 #patreonLogo{
     margin-right: -30px;
     margin-left: -30px;

@@ -31,6 +31,6 @@ Ask a derogation at Contact.unionrolistes@gmail.com-->
    
 </body>
 <?php
-    include('pages/footer.php');
+    include('pages/footer.html');
 ?>
 </html>
