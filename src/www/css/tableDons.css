@@ -94,6 +94,9 @@ table.table1{
     width: 5em;
     margin: -20px;
 }
+#BitPay{
+    width: 25%;
+}
 
 
 /*Pour le responsive et affichage mobile :*/

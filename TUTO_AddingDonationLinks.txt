@@ -1,0 +1,12 @@
+Dans src/www/pages/dons.html
+
+(C'est du pur html)
+
+# Pour rajouter le lien BitPay :
+Ligne 35 : Remplacer href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS" par href="[lienBitPay]"
+
+# Pour rajouter un nouveau lien :
+Demandez à un développeur, ou bien inspirez vous des liens déjà présent : 
+vous devez rajouter une ligne à la ligne 13, 22 et 36. Correspondant respectivement au titre de la colonne, aux frais et au lien
+Inspirez vous du code des images déjà présentes pour en rajouter
+Attention, au delà d'un certain nombre de plateformes de dons, il faudra peut-être faire du design css en plus pour pas que le tableau déborde

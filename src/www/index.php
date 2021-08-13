@@ -16,16 +16,16 @@ Ask a derogation at Contact.unionrolistes@gmail.com-->
 </head>
 <body>
     
-<?php include('pages/header.php'); //Header avec le logo de fond et le menu déroulant ?>
+<?php include('pages/header.html'); //Header avec le logo de fond et le menu déroulant ?>
 
 
     <section id="UR">
             
         <?php 
-        include('pages/contact.php');
-        include('pages/prestations.php');
-        include('pages/dons.php');  
-        include('pages/boutique.php'); ?>
+        include('pages/contact.html');
+        include('pages/prestations.html');
+        include('pages/dons.html');  
+        include('pages/boutique.html'); ?>
 
     </section>
    

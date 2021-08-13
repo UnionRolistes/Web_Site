@@ -1,3 +1,7 @@
+- Changelog for v0.2.4 (2021-08-13)
+    * Added BitCoin via BitPay
+    * pages.php --> .html
+
 - Changelog for v0.2.3 (2021-08-12)
     * footer.php --> .html
     * Changes on donation platformss
