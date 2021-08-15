@@ -107,3 +107,19 @@ nav > ul li:hover .sous{
 nav > ul li:hover .sous, nav > ul li:active .sous{
     display: block;
 }
+
+
+
+
+/*Pour le responsive et affichage mobile :*/
+@-ms-viewport {
+    width: device-width;
+}
+  
+@media screen and (max-width:840px){
+  
+    nav a{
+        width:25vw; /*On agrandit la taille horizontale du menu déroulant, sinon les mots dépassent*/
+    }
+}
+
