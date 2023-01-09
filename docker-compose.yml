@@ -1,0 +1,13 @@
+name: Union-des-rolistes
+
+services:
+  bot:
+    environment:
+      - URL_SITE_SITE= http://site.unionrolistes.fr/
+      - BOT_SITE_VERSION=x.x.x
+    volumes:
+      - ../Web_Site/bot/extends/:/app/extends/site/:ro
+  php:
+    volumes:
+      - ../Web_Site/web/www/:/var/www/html/Web_Site/:rw
+      - ../Web_Site/web/vhost/300-UR_Site.conf:/etc/apache2/sites-enabled/300-UR_Site.conf:ro
