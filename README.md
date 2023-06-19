@@ -23,5 +23,7 @@ Pour une mise à jour :
 ```cmd
  cmd /c mklink /D ..\Bot_Base\bot\extends\site ..\..\..\Web_Site\bot\extends 
 ```
-c'ette solution permet de copier coller est plus rapide qu'un git submodule.
+L'utilisation du lien symbolique est la meilleur solution dans ce cas.
+car copier-coler a chaque fois ou git submodule sont des solution plus compliquer a tester pour dev.
+
 Penser à ajouter les variables d'environnement
