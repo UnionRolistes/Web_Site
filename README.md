@@ -23,4 +23,5 @@ Pour une mise à jour :
 ```cmd
  cmd /c mklink /D ..\Bot_Base\bot\extends\site ..\..\..\Web_Site\bot\extends 
 ```
+c'ette solution permet de copier coller est plus rapide qu'un git submodule.
 Penser à ajouter les variables d'environnement
