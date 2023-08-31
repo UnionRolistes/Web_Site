@@ -18,3 +18,12 @@ sudo nano /etc/apache2/sites-available/300-UR_Site.conf --> Remplacer "serverNam
 
 Pour une mise à jour :
 "cd /usr/local/src/Bot_Base && sudo git checkout . && sudo git pull && sudo bash updateBot.sh"
+
+## Développer sous windows avec BotBase
+```cmd
+ cmd /c mklink /D ..\Bot_Base\bot\extends\site ..\..\..\Web_Site\bot\extends 
+```
+L'utilisation du lien symbolique est la meilleur solution dans ce cas.
+car copier-coler a chaque fois ou git submodule sont des solution plus compliquer a tester pour dev.
+
+Penser à ajouter les variables d'environnement
