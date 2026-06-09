@@ -131,6 +131,7 @@ html[data-theme="light"] header.site.scrolled{background:rgba(244,245,247,.85);b
 html[data-theme="light"] .btn--primary{background:linear-gradient(180deg,#2b313a,#1a1d22);color:#f4f5f7}
 html[data-theme="light"] .btn--primary:hover{box-shadow:0 0 0 1px rgba(40,48,58,.4),0 26px 50px -18px rgba(40,48,58,.35)}
 html[data-theme="light"] .btn--ghost{background:rgba(20,28,40,.02)}
+html[data-theme="light"] .donate.featured .tag{background:linear-gradient(180deg,#2b313a,#1a1d22);color:#f4f5f7}
 /* Logo/hydre/blasons : sombres en mode clair (au lieu de blancs) */
 html[data-theme="light"] .brand .crest{filter:brightness(0) invert(.12)}
 html[data-theme="light"] .medallion .hydre{filter:brightness(0) drop-shadow(0 8px 22px rgba(20,28,40,.25))}
