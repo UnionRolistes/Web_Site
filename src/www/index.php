@@ -176,6 +176,17 @@ body::after{
   box-shadow:inset 0 0 240px 40px rgba(0,0,0,.55);
 }
 
+/* Trame de fond : hydre fixe en filigrane, le contenu défile par-dessus */
+.page-trame{
+  position:fixed; z-index:0; top:50%; left:50%; translate:-50% -50%;
+  width:min(820px,86vw); opacity:.04; pointer-events:none; user-select:none;
+  filter:brightness(0) invert(.9);
+  -webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent);
+  mask-image:radial-gradient(closest-side,#000 55%,transparent);
+}
+html[data-theme="light"] .page-trame{filter:brightness(0) invert(.12);opacity:.05}
+@media (max-width:700px){.page-trame{width:min(420px,82vw);opacity:.03}}
+
 h1,h2,h3,.font-display{font-family:"UR Serif", serif;font-weight:700;letter-spacing:.5px;line-height:1.12;color:var(--cream);text-wrap:balance}
 p,.lead{text-wrap:pretty}
 a{color:inherit;text-decoration:none}
@@ -495,6 +506,7 @@ footer.site li a:hover{color:var(--silver-bright)}
 <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
+<img class="page-trame" src="img/hydre.png" alt="" aria-hidden="true">
 
 <!-- ============ HEADER ============ -->
 <header class="site" id="top">
@@ -534,7 +546,6 @@ footer.site li a:hover{color:var(--silver-bright)}
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <img class="hero-watermark" src="img/hydre.png" alt="">
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow" data-reveal>Association rôliste · depuis 2016</span>
