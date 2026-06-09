@@ -23,6 +23,16 @@ padding: 20px;
 overflow: auto;
 background-color: #23272A;
 }
+/*Trame du kit UR (hydre/D20) en filigrane : parchemin clair fondu a faible opacite sur le fond sombre*/
+body::before{
+content:"";
+position: fixed;
+inset: 0;
+z-index: -1;
+background: url('../img/fond-trame.webp') center center / cover no-repeat fixed;
+opacity: 0.10;
+pointer-events: none;
+}
 .titleCenter{ /*!IMPORTANT, utilisé dans plusieurs pages*/
 text-align: center;
 }

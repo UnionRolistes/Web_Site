@@ -47,7 +47,7 @@ html,body{
       backface-visibility: hidden;
       scale(1.0, 1.0);
       transform: translateZ(0);
-    background:#1B2030 url('../img/ur-bl2.png') 50% 0 no-repeat; /*Image de fond, personnalisable*/
+    background:#1B2030 url('../img/ur-blanc.png') 50% 0 no-repeat; /*Logo blanc du kit (negatif) pour contraster sur le hero sombre*/
     background-size:25%;
     background-attachment:fixed;
     animation: grow 360s  linear 10ms infinite;
