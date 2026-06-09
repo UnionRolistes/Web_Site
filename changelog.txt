@@ -4,6 +4,7 @@
     * Page autonome : anciens includes pages/ et feuilles css/ retires (#15)
     * SEO : canonical/OG/Twitter/JSON-LD vers le domaine de prod HTTPS, balises og:image + robots ; tous les liens en https (anti mixed-content)
     * Contenu : chiffres communaute a jour (1300+ membres, 80+ JdR), mention FedeGN ; tuto dons mis a jour pour la page autonome
+    * Polices : bascule sur OldNewspaperTypes (charte UR), self-hostees -> plus de dependance Google Fonts externe
     * Mode clair / sombre : bascule dans le header, memorisee (localStorage), respect du reglage systeme ; palette claire neutre blanc/gris (#19)
     * UX/contenu : "UnionRolistes", adresse remplacee par "Siege a Paris (IdF)", icones colorees au survol (coeur rouge / Discord blurple), header mobile repense (Discord en icone, logo seul, burger visible, plus de debordement horizontal)
 

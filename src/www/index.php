@@ -60,11 +60,16 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
 </script>
 
 <link rel="icon" type="image/png" href="img/hydre.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
 <style>
+/* Police de marque (kit UR), self-hostée -> plus de dependance Google Fonts */
+@font-face{
+  font-family:'UR Serif';
+  src:url('fonts/OldNewspaperTypes.ttf') format('truetype');
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
 /* =========================================================
    L'UNION DES RÔLISTES — refonte
    Direction : charte enluminée / bannière de guilde
@@ -149,7 +154,7 @@ body{
     radial-gradient(900px 600px at 50% 120%, rgba(206,213,222,.10), transparent 60%),
     var(--ink);
   color:var(--cream);
-  font-family:"Spectral", Georgia, serif;
+  font-family:"UR Serif", Georgia, serif;
   font-weight:400;
   font-size:clamp(16px,1.05vw,18px);
   line-height:1.7;
@@ -171,7 +176,7 @@ body::after{
   box-shadow:inset 0 0 240px 40px rgba(0,0,0,.55);
 }
 
-h1,h2,h3,.font-display{font-family:"Cinzel", serif;font-weight:700;letter-spacing:.5px;line-height:1.12;color:var(--cream);text-wrap:balance}
+h1,h2,h3,.font-display{font-family:"UR Serif", serif;font-weight:700;letter-spacing:.5px;line-height:1.12;color:var(--cream);text-wrap:balance}
 p,.lead{text-wrap:pretty}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -180,7 +185,7 @@ img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(20px,5vw,40px);position:relative;z-index:2}
 
 .eyebrow{
-  font-family:"Cinzel",serif;font-weight:600;
+  font-family:"UR Serif",serif;font-weight:600;
   font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;
   color:var(--silver);display:inline-flex;align-items:center;gap:.7em;
 }
@@ -191,7 +196,7 @@ img{max-width:100%;display:block}
 .btn{
   --bg:var(--silver);
   display:inline-flex;align-items:center;gap:.6em;
-  font-family:"Cinzel",serif;font-weight:600;font-size:.86rem;letter-spacing:.06em;
+  font-family:"UR Serif",serif;font-weight:600;font-size:.86rem;letter-spacing:.06em;
   padding:.85em 1.5em;border-radius:999px;border:1px solid transparent;
   cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .35s,color .35s;
   position:relative;white-space:nowrap;
@@ -230,12 +235,12 @@ header.site .wrap{max-width:1340px}
   transition:transform .6s var(--ease);
 }
 .brand:hover .crest{transform:rotate(-6deg) scale(1.05)}
-.brand b{font-family:"Cinzel",serif;font-weight:700;font-size:1.02rem;letter-spacing:.02em;color:var(--cream);line-height:1}
-.brand small{display:block;font-family:"Cinzel",serif;font-weight:500;font-size:.58rem;letter-spacing:.32em;color:var(--silver);text-transform:uppercase;margin-top:3px}
+.brand b{font-family:"UR Serif",serif;font-weight:700;font-size:1.02rem;letter-spacing:.02em;color:var(--cream);line-height:1}
+.brand small{display:block;font-family:"UR Serif",serif;font-weight:500;font-size:.58rem;letter-spacing:.32em;color:var(--silver);text-transform:uppercase;margin-top:3px}
 
 .nav-links{display:flex;align-items:center;gap:1.05rem;list-style:none;margin:0;padding:0}
 .nav-links a{
-  font-family:"Cinzel",serif;font-size:.78rem;font-weight:500;color:var(--muted);
+  font-family:"UR Serif",serif;font-size:.78rem;font-weight:500;color:var(--muted);
   letter-spacing:.01em;position:relative;padding:.3em 0;transition:color .3s;white-space:nowrap;
 }
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--silver);transition:width .35s var(--ease)}
@@ -303,8 +308,8 @@ html[data-theme="light"] .theme-toggle .i-moon{display:block}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
 
 .hero-stats{display:flex;flex-wrap:wrap;gap:2.2rem;margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--line-soft)}
-.stat .num{font-family:"Cinzel",serif;font-weight:700;font-size:clamp(1.7rem,3vw,2.3rem);color:var(--silver-bright);line-height:1;display:flex;align-items:baseline;gap:.06em}
-.stat .lbl{font-size:.78rem;color:var(--muted);letter-spacing:.04em;margin-top:.45rem;text-transform:uppercase;font-family:"Cinzel",serif}
+.stat .num{font-family:"UR Serif",serif;font-weight:700;font-size:clamp(1.7rem,3vw,2.3rem);color:var(--silver-bright);line-height:1;display:flex;align-items:baseline;gap:.06em}
+.stat .lbl{font-size:.78rem;color:var(--muted);letter-spacing:.04em;margin-top:.45rem;text-transform:uppercase;font-family:"UR Serif",serif}
 
 /* Crest medallion ------------------------------------------------- */
 .medallion{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:380px;margin-inline:auto}
@@ -326,7 +331,7 @@ html[data-theme="light"] .theme-toggle .i-moon{display:block}
 }
 .medallion .seal{
   position:absolute;z-index:4;bottom:6%;left:50%;translate:-50% 0;
-  font-family:"Cinzel",serif;font-weight:600;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;
+  font-family:"UR Serif",serif;font-weight:600;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;
   color:var(--silver);background:var(--ink);padding:.4em 1em;border-radius:999px;border:1px solid var(--line);
 }
 /* floating dice */
@@ -365,7 +370,7 @@ section{position:relative;padding-block:clamp(3.5rem,7vw,6rem)}
 .fact:hover{border-color:var(--silver);transform:translateY(-3px)}
 .fact .ic{flex-shrink:0;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(206,213,222,.08);color:var(--silver);border:1px solid var(--line)}
 .fact .ic svg{width:20px;height:20px}
-.fact .k{font-family:"Cinzel",serif;font-weight:600;font-size:.95rem;color:var(--cream)}
+.fact .k{font-family:"UR Serif",serif;font-weight:600;font-size:.95rem;color:var(--cream)}
 .fact .v{font-size:.86rem;color:var(--muted);margin-top:.15rem}
 
 /* VALUES ---------------------------------------------------------- */
@@ -397,19 +402,19 @@ section{position:relative;padding-block:clamp(3.5rem,7vw,6rem)}
 }
 .donate:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .donate.featured{border-color:rgba(206,213,222,.5);box-shadow:var(--glow)}
-.donate .tag{position:absolute;top:1.2rem;right:1.2rem;font-family:"Cinzel",serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+.donate .tag{position:absolute;top:1.2rem;right:1.2rem;font-family:"UR Serif",serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
   padding:.35em .8em;border-radius:999px}
 .donate.featured .tag{background:linear-gradient(180deg,var(--silver-bright),var(--silver));color:#0e0f12}
 .donate.plain .tag{border:1px solid var(--line);color:var(--muted)}
 .donate h3{font-size:1.5rem;margin:.2rem 0 .1rem}
-.donate .fees{font-family:"Cinzel",serif;color:var(--silver-bright);font-weight:600;font-size:1rem;margin-bottom:.9rem}
-.donate .fees small{color:var(--muted);font-weight:400;font-family:"Spectral",serif}
+.donate .fees{font-family:"UR Serif",serif;color:var(--silver-bright);font-weight:600;font-size:1rem;margin-bottom:.9rem}
+.donate .fees small{color:var(--muted);font-weight:400;font-family:"UR Serif",serif}
 .donate p{color:var(--muted);font-size:.96rem;margin:0 0 1.4rem;flex:1}
 .donate .btn{align-self:flex-start;margin-top:auto}
 
 /* PARTNERS -------------------------------------------------------- */
 .part-group{margin-top:2rem}
-.part-group h3{font-size:.86rem;font-family:"Cinzel",serif;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);margin:0 0 1rem;display:flex;align-items:center;gap:.8rem}
+.part-group h3{font-size:.86rem;font-family:"UR Serif",serif;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);margin:0 0 1rem;display:flex;align-items:center;gap:.8rem}
 .part-group h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
 .chips{display:flex;flex-wrap:wrap;gap:.7rem}
 .chip{
@@ -439,7 +444,7 @@ section{position:relative;padding-block:clamp(3.5rem,7vw,6rem)}
 
 .shop-tease{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
 .shop-tease .soon{
-  font-family:"Cinzel",serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);
+  font-family:"UR Serif",serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);
   color:transparent;-webkit-text-stroke:1.3px var(--silver);letter-spacing:.04em;opacity:.8}
 
 /* COMMUNITY CTA --------------------------------------------------- */
@@ -454,7 +459,7 @@ section{position:relative;padding-block:clamp(3.5rem,7vw,6rem)}
 .cta-discord p{color:var(--parch);max-width:48ch;margin:0 auto 1.8rem;font-weight:300}
 .socials{display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
 .social{
-  display:inline-flex;align-items:center;gap:.5em;font-family:"Cinzel",serif;font-size:.8rem;color:var(--muted);
+  display:inline-flex;align-items:center;gap:.5em;font-family:"UR Serif",serif;font-size:.8rem;color:var(--muted);
   border:1px solid var(--line-soft);border-radius:999px;padding:.55em 1em;transition:color .3s,border-color .3s,transform .3s}
 .social:hover{color:var(--cream);border-color:var(--silver);transform:translateY(-2px)}
 .social svg{width:16px;height:16px}
@@ -465,9 +470,9 @@ footer.site{border-top:1px solid var(--line-soft);margin-top:2rem;padding-block:
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr;gap:2rem}}
 .foot-brand{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
 .foot-brand img{width:42px;filter:brightness(0) invert(.9)}
-.foot-brand b{font-family:"Cinzel",serif;font-size:1.05rem;color:var(--cream)}
+.foot-brand b{font-family:"UR Serif",serif;font-size:1.05rem;color:var(--cream)}
 footer.site p{color:var(--muted);font-size:.9rem;margin:.3rem 0}
-footer.site h4{font-family:"Cinzel",serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin:0 0 1rem}
+footer.site h4{font-family:"UR Serif",serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin:0 0 1rem}
 footer.site ul{list-style:none;margin:0;padding:0}
 footer.site li{margin-bottom:.55rem}
 footer.site li a{color:var(--parch);font-size:.92rem;transition:color .3s}
@@ -561,7 +566,7 @@ footer.site li a:hover{color:var(--silver-bright)}
         <div class="ring r2"></div>
         <div class="ring r3"></div>
         <!-- floating dice -->
-        <svg class="die d-a" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M50 6 92 30v40L50 94 8 70V30Z"/><path d="M50 6 50 38M8 30l30 14M92 30 62 44M38 44 50 94 62 44 38 44ZM38 44 8 70M62 44 92 70"/><text x="50" y="34" font-family="Cinzel" font-size="15" fill="currentColor" stroke="none" text-anchor="middle">20</text></svg>
+        <svg class="die d-a" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M50 6 92 30v40L50 94 8 70V30Z"/><path d="M50 6 50 38M8 30l30 14M92 30 62 44M38 44 50 94 62 44 38 44ZM38 44 8 70M62 44 92 70"/><text x="50" y="34" font-family="UR Serif" font-size="15" fill="currentColor" stroke="none" text-anchor="middle">20</text></svg>
         <svg class="die d-b" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M50 6 92 30v40L50 94 8 70V30Z"/><path d="M50 6 50 38M8 30l30 14M92 30 62 44M38 44 50 94 62 44 38 44Z"/></svg>
         <svg class="die d-c" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M50 6 92 30v40L50 94 8 70V30Z"/><path d="M50 6 50 38M8 30l30 14M92 30 62 44M38 44 50 94 62 44 38 44Z"/></svg>
         <img class="hydre" id="hydre" src="img/hydre.png" alt="Blason de l'Union des Rôlistes : une hydre à trois têtes lançant un dé à 20 faces" style="content-visibility:auto">
