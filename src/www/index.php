@@ -274,18 +274,26 @@ header.site .wrap{max-width:1340px}
 html[data-theme="light"] .theme-toggle .i-sun{display:none}
 html[data-theme="light"] .theme-toggle .i-moon{display:block}
 
+.burger .i-x{display:none}
 @media (max-width:1000px){
+  /* Menu mobile PLEIN ÉCRAN */
   .nav-links{
-    position:fixed;inset:0 0 0 auto;width:min(82vw,340px);
-    flex-direction:column;align-items:flex-start;justify-content:center;gap:1.4rem;
-    padding:2rem 2.2rem;background:var(--ink-2);border-left:1px solid var(--line);
-    transform:translateX(105%);transition:transform .5s var(--ease);box-shadow:var(--shadow);z-index:60;
+    position:fixed;inset:0;margin:0;list-style:none;
+    flex-direction:column;align-items:center;justify-content:center;gap:.3rem;
+    padding:5.5rem 1.5rem 2rem;background:var(--ink-2);
+    transform:translateX(100%);visibility:hidden;transition:transform .4s var(--ease),visibility .4s;z-index:62;overflow-y:auto;
   }
-  .nav-links.open{transform:none}
-  .nav-links a{font-size:1.05rem}
-  .burger{display:flex}
+  .nav-links.open{transform:none;visibility:visible}
+  /* le backdrop-filter du header crée un bloc conteneur pour le menu fixed -> le retirer en mobile pour qu'il prenne tout l'écran */
+  header.site,header.site.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .nav-links li{width:100%;max-width:320px}
+  .nav-links a{display:block;width:100%;text-align:center;font-size:1.3rem;padding:.75rem 1rem;border-radius:12px;color:var(--cream);transition:background .2s,color .2s}
+  .nav-links a::after{display:none}
+  .nav-links a:hover,.nav-links a:active{background:rgba(207,214,223,.10);color:var(--silver-bright)}
+  .burger{display:flex;position:relative;z-index:63}
+  .burger[aria-expanded="true"] .i-menu{display:none}
+  .burger[aria-expanded="true"] .i-x{display:block}
   .nav-cta{gap:.5rem}
-  /* Discord compact (icône seule) pour laisser la place au burger */
   .nav-cta .btn--primary{padding:0;width:42px;height:42px;justify-content:center}
   .nav-cta .btn--primary .btn-label{display:none}
 }
@@ -543,7 +551,8 @@ footer.site li a:hover{color:var(--silver-bright)}
         <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
       </button>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
       </button>
     </div>
   </div>
@@ -863,15 +872,24 @@ footer.site li a:hover{color:var(--silver-bright)}
   var onScroll=function(){header.classList.toggle("scrolled",window.scrollY>20)};
   onScroll();window.addEventListener("scroll",onScroll,{passive:true});
 
-  /* mobile menu */
+  /* menu mobile plein écran */
   var burger=doc.getElementById("burger");
   var links=doc.getElementById("navLinks");
-  burger.addEventListener("click",function(){
-    var open=links.classList.toggle("open");
+  function setMenu(open){
+    links.classList.toggle("open",open);
     burger.setAttribute("aria-expanded",open);
-  });
+    doc.body.style.overflow=open?"hidden":"";
+  }
+  burger.addEventListener("click",function(){setMenu(!links.classList.contains("open"));});
   links.addEventListener("click",function(e){
-    if(e.target.tagName==="A")links.classList.remove("open");
+    var a=e.target.closest("a"); if(!a)return;
+    var href=a.getAttribute("href");
+    setMenu(false);
+    if(href && href.charAt(0)==="#"){
+      e.preventDefault();
+      var t=doc.querySelector(href);
+      if(t)setTimeout(function(){ t.scrollIntoView({behavior:"smooth"}); history.replaceState(null,"",href); },150);
+    }
   });
 
   /* theme toggle (clair / sombre) */
