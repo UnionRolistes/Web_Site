@@ -6,7 +6,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>L'Union des Rôlistes · Fédérer et soutenir le jeu de rôle</title>
-<meta name="description" content="L'Union des Rôlistes est une association loi 1901 qui fédère rôlistes, clubs, boutiques et auteurs autour du jeu de rôle. Un lieu safe et neutre pour faire vivre le JDR sous toutes ses formes.">
+<meta name="description" content="L'Union des Rôlistes est une association loi 1901 qui fédère rôlistes, clubs, boutiques et auteurs autour du jeu de rôle. Un lieu safe et neutre pour faire vivre le JDR.">
 <meta name="keywords" content="jeu de rôle, JDR, association rôliste, loi 1901, D&D, Pathfinder, Warhammer, rôlistes, communauté Discord">
 <meta name="author" content="Association Union des Rôlistes & Co.">
 <meta name="theme-color" content="#0e0f12" media="(prefers-color-scheme: dark)">
@@ -60,6 +60,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
 </script>
 
 <link rel="icon" type="image/png" href="img/hydre.png">
+<link rel="preload" href="fonts/OldNewspaperTypes.ttf" as="font" type="font/ttf" crossorigin>
 
 <style>
 /* Police de marque (kit UR), self-hostée -> plus de dependance Google Fonts */
@@ -1018,13 +1019,14 @@ footer.site li a:hover{color:var(--silver-bright)}
     <div class="legal">
       <small>
         © 2016–2026 Association Union des Rôlistes &amp; Co. · SIRET 850 580 663 · RNA W751252183<br>
-        Contenu sous licence Creative Commons BY-NC-SA 4.0. Nous contacter pour toute dérogation.
+        Contenu sous licence Creative Commons BY-NC-SA 4.0. Nous contacter pour toute dérogation.<br>
+        Site réalisé par <a href="https://web-developpeur.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">ohugonnot</a>.
       </small>
       <a class="cc" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener" title="CC BY-NC-SA 4.0">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" aria-hidden="true" loading="lazy">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" aria-hidden="true" loading="lazy">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" aria-hidden="true" loading="lazy">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" aria-hidden="true" loading="lazy">
       </a>
     </div>
   </div>
