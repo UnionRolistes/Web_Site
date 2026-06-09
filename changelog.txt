@@ -6,6 +6,7 @@
     * Contenu : chiffres communaute a jour (1300+ membres, 80+ JdR), mention FedeGN ; tuto dons mis a jour pour la page autonome
     * Polices : bascule sur OldNewspaperTypes (charte UR), self-hostees -> plus de dependance Google Fonts externe
     * Mode clair / sombre : bascule dans le header, memorisee (localStorage), respect du reglage systeme ; palette claire neutre blanc/gris (#19)
+    * UX/contenu : "UnionRolistes", adresse remplacee par "Siege a Paris (IdF)", icones colorees au survol (coeur rouge / Discord blurple), header mobile repense (Discord en icone, logo seul, burger visible, plus de debordement horizontal)
 
 - Changelog for v0.2.5 (2022-02-04)
     * correction du readme
