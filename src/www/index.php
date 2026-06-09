@@ -108,25 +108,25 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
 
 /* ===== Mode clair (neutre blanc/gris) ===== */
 html[data-theme="light"]{
-  --ink:        #f4f5f7;
+  --ink:        #e7e9ef;   /* fond plus gris -> les cartes blanches ressortent */
   --ink-2:      #ffffff;
   --panel:      #ffffff;
-  --panel-2:    #f6f7f9;
-  --line:       #d7dbe1;
-  --line-soft:  #e6e9ee;
-  --cream:      #1a1d22;
-  --parch:      #3a3f47;
-  --muted:      #5b626c;
-  --muted-2:    #7a828d;
-  --silver:        #525b66;
-  --silver-bright: #20242b;
-  --silver-deep:   #828b97;
-  --steel:      #5e6772;
-  --steel-soft: #444b54;
-  --slate:      #6b7480;
-  --slate-soft: #525b66;
-  --shadow: 0 24px 60px -30px rgba(20,28,40,.28);
-  --glow: 0 0 0 1px rgba(40,48,58,.10), 0 18px 40px -22px rgba(40,48,58,.22);
+  --panel-2:    #f3f5f9;
+  --line:       #c6ccd6;   /* bordures nettes */
+  --line-soft:  #d9dee6;
+  --cream:      #13161b;   /* titres / texte fort */
+  --parch:      #2b303a;   /* texte courant plus foncé */
+  --muted:      #49515d;
+  --muted-2:    #69717d;
+  --silver:        #444d5b;
+  --silver-bright: #1a1e26;
+  --silver-deep:   #79828f;
+  --steel:      #515a66;
+  --steel-soft: #3a414b;
+  --slate:      #606977;
+  --slate-soft: #444d5b;
+  --shadow: 0 20px 48px -22px rgba(18,26,40,.38);
+  --glow: 0 0 0 1px rgba(30,38,52,.14), 0 16px 36px -20px rgba(30,38,52,.30);
 }
 /* Ajustements ciblés du mode clair (là où une variable ne suffit pas) */
 html[data-theme="light"] body::after{box-shadow:inset 0 0 200px 30px rgba(20,28,40,.05)}
@@ -141,9 +141,14 @@ html[data-theme="light"] .brand .crest{filter:brightness(0) invert(.12)}
 html[data-theme="light"] .medallion .hydre{filter:brightness(0) drop-shadow(0 8px 22px rgba(20,28,40,.25))}
 html[data-theme="light"] .hero-watermark{filter:brightness(0) invert(.1)}
 html[data-theme="light"] .foot-brand img{filter:brightness(0) invert(.12)}
+/* Pop de résultat : accents crit/échec lisibles sur fond clair */
+html[data-theme="light"] .dice-pop.crit{border-color:rgba(38,138,77,.5)}
+html[data-theme="light"] .dice-pop.crit .pl{color:#218046}
+html[data-theme="light"] .dice-pop.fail{border-color:rgba(199,55,55,.45)}
+html[data-theme="light"] .dice-pop.fail .pl{color:#c93636}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;overflow-x:clip}
+html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 body{
