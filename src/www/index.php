@@ -9,7 +9,9 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
 <meta name="description" content="L'Union des Rôlistes est une association loi 1901 qui fédère rôlistes, clubs, boutiques et auteurs autour du jeu de rôle. Un lieu safe et neutre pour faire vivre le JDR sous toutes ses formes.">
 <meta name="keywords" content="jeu de rôle, JDR, association rôliste, loi 1901, D&D, Pathfinder, Warhammer, rôlistes, communauté Discord">
 <meta name="author" content="Association Union des Rôlistes & Co.">
-<meta name="theme-color" content="#0e0f12">
+<meta name="theme-color" content="#0e0f12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
+<script>(function(){try{var t=localStorage.getItem('ur-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();</script>
 <link rel="canonical" href="https://site.unionrolistes.fr/">
 <meta name="robots" content="index, follow">
 
@@ -99,6 +101,41 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
   --shadow: 0 24px 60px -28px rgba(0,0,0,.85);
   --glow: 0 0 0 1px rgba(207,214,223,.22), 0 22px 50px -22px rgba(207,214,223,.20);
 }
+
+/* ===== Mode clair (neutre blanc/gris) ===== */
+html[data-theme="light"]{
+  --ink:        #f4f5f7;
+  --ink-2:      #ffffff;
+  --panel:      #ffffff;
+  --panel-2:    #f6f7f9;
+  --line:       #d7dbe1;
+  --line-soft:  #e6e9ee;
+  --cream:      #1a1d22;
+  --parch:      #3a3f47;
+  --muted:      #5b626c;
+  --muted-2:    #7a828d;
+  --silver:        #525b66;
+  --silver-bright: #20242b;
+  --silver-deep:   #828b97;
+  --steel:      #5e6772;
+  --steel-soft: #444b54;
+  --slate:      #6b7480;
+  --slate-soft: #525b66;
+  --shadow: 0 24px 60px -30px rgba(20,28,40,.28);
+  --glow: 0 0 0 1px rgba(40,48,58,.10), 0 18px 40px -22px rgba(40,48,58,.22);
+}
+/* Ajustements ciblés du mode clair (là où une variable ne suffit pas) */
+html[data-theme="light"] body::after{box-shadow:inset 0 0 200px 30px rgba(20,28,40,.05)}
+html[data-theme="light"] ::selection{background:rgba(82,91,102,.22);color:#10131a}
+html[data-theme="light"] header.site.scrolled{background:rgba(244,245,247,.85);box-shadow:0 12px 30px -24px rgba(20,28,40,.25)}
+html[data-theme="light"] .btn--primary{background:linear-gradient(180deg,#2b313a,#1a1d22);color:#f4f5f7}
+html[data-theme="light"] .btn--primary:hover{box-shadow:0 0 0 1px rgba(40,48,58,.4),0 26px 50px -18px rgba(40,48,58,.35)}
+html[data-theme="light"] .btn--ghost{background:rgba(20,28,40,.02)}
+/* Logo/hydre/blasons : sombres en mode clair (au lieu de blancs) */
+html[data-theme="light"] .brand .crest{filter:brightness(0) invert(.12)}
+html[data-theme="light"] .medallion .hydre{filter:brightness(0) drop-shadow(0 8px 22px rgba(20,28,40,.25))}
+html[data-theme="light"] .hero-watermark{filter:brightness(0) invert(.1)}
+html[data-theme="light"] .foot-brand img{filter:brightness(0) invert(.12)}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -204,6 +241,13 @@ header.site .wrap{max-width:1340px}
 
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;cursor:pointer;color:var(--cream)}
 .burger svg{width:20px;height:20px;margin:auto}
+
+.theme-toggle{display:flex;align-items:center;justify-content:center;background:none;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;cursor:pointer;color:var(--cream);transition:border-color .3s,color .3s}
+.theme-toggle:hover{border-color:var(--silver);color:var(--silver-bright)}
+.theme-toggle svg{width:19px;height:19px}
+.theme-toggle .i-moon{display:none}
+html[data-theme="light"] .theme-toggle .i-sun{display:none}
+html[data-theme="light"] .theme-toggle .i-moon{display:block}
 
 @media (max-width:1000px){
   .nav-links{
@@ -462,6 +506,10 @@ footer.site li a:hover{color:var(--silver-bright)}
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4.4A19 19 0 0 0 15.3 3l-.2.4a17 17 0 0 1 4.2 1.3 17 17 0 0 0-14.6 0A17 17 0 0 1 8.9 3.4L8.7 3A19 19 0 0 0 4 4.4 19.6 19.6 0 0 0 .6 17.5 19 19 0 0 0 6.4 20l.5-1a13 13 0 0 1-2-1l.5-.4a13.6 13.6 0 0 0 11.6 0l.5.4-2 1 .5 1a19 19 0 0 0 5.8-2.5A19.5 19.5 0 0 0 20 4.4ZM8.5 14.7c-1 0-1.8-1-1.8-2.1s.8-2.1 1.8-2.1 1.8 1 1.8 2.1-.8 2.1-1.8 2.1Zm7 0c-1 0-1.8-1-1.8-2.1s.8-2.1 1.8-2.1 1.8 1 1.8 2.1-.8 2.1-1.8 2.1Z"/></svg>
         Discord
       </a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Basculer le thème clair / sombre">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+      </button>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -794,6 +842,15 @@ footer.site li a:hover{color:var(--silver-bright)}
   links.addEventListener("click",function(e){
     if(e.target.tagName==="A")links.classList.remove("open");
   });
+
+  /* theme toggle (clair / sombre) */
+  var tbtn=doc.getElementById("themeToggle");
+  if(tbtn){tbtn.addEventListener("click",function(){
+    var isLight=doc.documentElement.getAttribute("data-theme")==="light";
+    if(isLight){doc.documentElement.removeAttribute("data-theme");}
+    else{doc.documentElement.setAttribute("data-theme","light");}
+    try{localStorage.setItem("ur-theme",isLight?"dark":"light");}catch(e){}
+  });}
 
   /* reveal on scroll */
   var reveals=doc.querySelectorAll("[data-reveal]");
