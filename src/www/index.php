@@ -151,6 +151,8 @@ html[data-theme="light"] .dice-pop.fail .pl{color:#c93636}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.skip-link{position:absolute;left:8px;top:-56px;z-index:100;background:var(--ink-2);color:var(--cream);border:1px solid var(--line);padding:.55em 1.1em;border-radius:8px;font-family:"UR Serif",serif;font-size:.9rem;transition:top .2s}
+.skip-link:focus{top:8px}
 
 body{
   margin:0;
@@ -662,6 +664,7 @@ footer.site li a:hover{color:var(--silver-bright)}
       <li><a href="#soutenir">Nous soutenir</a></li>
       <li><a href="#discord">Communauté</a></li>
     </ul>
+    </nav>
 
     <div class="nav-cta">
       <a class="btn btn--primary" href="https://discord.com/invite/rxqqBS8" target="_blank" rel="noopener">
@@ -672,13 +675,15 @@ footer.site li a:hover{color:var(--silver-bright)}
         <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg>
         <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
       </button>
-      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <button class="burger" id="burger" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
         <svg class="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <svg class="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
       </button>
     </div>
   </div>
 </header>
+
+<main id="contenu">
 
 <!-- ============ HERO ============ -->
 <section class="hero">
@@ -1042,8 +1047,12 @@ footer.site li a:hover{color:var(--silver-bright)}
     links.classList.toggle("open",open);
     burger.setAttribute("aria-expanded",open);
     doc.body.style.overflow=open?"hidden":"";
+    if(open){var f=links.querySelector("a"); if(f)f.focus();}
   }
   burger.addEventListener("click",function(){setMenu(!links.classList.contains("open"));});
+  doc.addEventListener("keydown",function(e){
+    if(e.key==="Escape" && links.classList.contains("open")){setMenu(false); burger.focus();}
+  });
   links.addEventListener("click",function(e){
     var a=e.target.closest("a"); if(!a)return;
     var href=a.getAttribute("href");
