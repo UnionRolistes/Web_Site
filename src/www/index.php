@@ -700,15 +700,15 @@ footer.site li a:hover{color:var(--silver-bright)}
       </div>
 
       <div class="hero-stats" data-reveal data-d="4">
-        <div class="stat"><div class="num"><span data-count="1300">0</span><span style="color:var(--silver)">+</span></div><div class="lbl">membres Discord</div></div>
+        <div class="stat"><div class="num"><span data-count="1300" data-roll>0</span><span style="color:var(--silver)">+</span></div><div class="lbl">membres Discord</div></div>
         <div class="stat"><div class="num"><span data-count="2016">0</span></div><div class="lbl">collectif fondateur</div></div>
-        <div class="stat"><div class="num"><span data-count="9">0</span></div><div class="lbl">partenaires</div></div>
+        <div class="stat"><div class="num"><span data-count="9" data-roll>0</span></div><div class="lbl">partenaires</div></div>
         <div class="stat"><div class="num">2019</div><div class="lbl">association déclarée</div></div>
       </div>
     </div>
 
     <div class="hero-art" data-reveal data-d="2">
-      <div class="medallion">
+      <div class="medallion" role="button" tabindex="0" aria-label="Lancer les dés (d100)">
         <div class="ring r1"></div>
         <div class="ring r2"></div>
         <div class="ring r3"></div>
@@ -1090,10 +1090,33 @@ footer.site li a:hover{color:var(--silver-bright)}
     };
     requestAnimationFrame(step);
   };
+  /* jet de dés : la valeur s'emballe en aléatoire (flips qui ralentissent) puis se stabilise sur la cible */
+  var roll=function(el){
+    var target=+el.getAttribute("data-count"),start=null,last=0,dur=1600;
+    var step=function(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      if(p>=1){el.textContent=target.toLocaleString("fr-FR");return;}
+      var flip=45+p*p*250;
+      if(ts-last>=flip){
+        last=ts;
+        var spread=Math.max(1,Math.round(target*(1-p)));
+        var v=p<.7?Math.floor(Math.random()*(target+spread)):target-Math.floor(Math.random()*spread);
+        el.textContent=Math.max(0,v).toLocaleString("fr-FR");
+      }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  var rmReduce=window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var run=function(el){
+    if(rmReduce){el.textContent=(+el.getAttribute("data-count")).toLocaleString("fr-FR");return;}
+    (el.hasAttribute("data-roll")?roll:animate)(el);
+  };
   if("IntersectionObserver"in window){
     var io2=new IntersectionObserver(function(entries){
       entries.forEach(function(en){
-        if(en.isIntersecting){animate(en.target);io2.unobserve(en.target);}
+        if(en.isIntersecting){run(en.target);io2.unobserve(en.target);}
       });
     },{threshold:.6});
     counters.forEach(function(el){io2.observe(el);});
