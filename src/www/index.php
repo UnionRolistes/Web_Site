@@ -297,7 +297,7 @@ header.site .wrap{max-width:1340px}
 
 .nav-links{display:flex;align-items:center;gap:1.05rem;list-style:none;margin:0;padding:0}
 .nav-links a{
-  font-family:"UR Serif",serif;font-size:.78rem;font-weight:500;color:var(--muted);
+  font-family:"UR Serif",serif;font-size:.9rem;font-weight:500;color:var(--muted);
   letter-spacing:.01em;position:relative;padding:.3em 0;transition:color .3s;white-space:nowrap;
 }
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--silver);transition:width .35s var(--ease)}
@@ -345,7 +345,7 @@ html[data-theme="light"] .theme-toggle .i-moon{display:block}
 /* =========================================================
    HERO
    ========================================================= */
-.hero{position:relative;padding-top:clamp(3rem,7vw,5.5rem);padding-bottom:clamp(3.5rem,7vw,6rem);overflow:hidden;isolation:isolate}
+.hero{position:relative;padding-top:clamp(3rem,7vw,5.5rem);padding-bottom:clamp(2.5rem,4.5vw,4rem);overflow:hidden;isolation:isolate}
 .hero-watermark{
   position:absolute;z-index:0;top:50%;right:-6%;translate:0 -50%;
   width:min(720px,68vw);opacity:.06;pointer-events:none;
