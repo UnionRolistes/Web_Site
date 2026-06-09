@@ -47,9 +47,8 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
   "email": "contact.unionrolistes@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "5 rue Fernand Pelloutier",
-    "postalCode": "75017",
     "addressLocality": "Paris",
+    "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
   "sameAs": [
@@ -139,7 +138,7 @@ html[data-theme="light"] .hero-watermark{filter:brightness(0) invert(.1)}
 html[data-theme="light"] .foot-brand img{filter:brightness(0) invert(.12)}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 body{
@@ -202,6 +201,10 @@ img{max-width:100%;display:block}
 .btn--primary:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(242,245,248,.5),0 26px 50px -18px rgba(206,213,222,.55)}
 .btn--ghost{background:rgba(243,231,207,.03);color:var(--cream);border-color:var(--line)}
 .btn--ghost:hover{transform:translateY(-2px);border-color:var(--silver);color:var(--silver-bright);background:rgba(206,213,222,.06)}
+/* Icônes colorées au survol : cœur rouge sur "Soutenir", blurple sur Discord */
+.btn svg{transition:color .3s var(--ease)}
+a.btn[href="#soutenir"]:hover svg{color:#ff4d5e}
+a.btn[href*="discord.com"]:hover svg{color:#5865f2}
 
 /* =========================================================
    HEADER
@@ -260,7 +263,13 @@ html[data-theme="light"] .theme-toggle .i-moon{display:block}
   .nav-links.open{transform:none}
   .nav-links a{font-size:1.05rem}
   .burger{display:flex}
-  .nav-cta .btn--ghost{display:none}
+  .nav-cta{gap:.5rem}
+  /* Discord compact (icône seule) pour laisser la place au burger */
+  .nav-cta .btn--primary{padding:0;width:42px;height:42px;justify-content:center}
+  .nav-cta .btn--primary .btn-label{display:none}
+}
+@media (max-width:430px){
+  .brand span{display:none}   /* logo seul : le burger garde toute la place */
 }
 
 /* =========================================================
@@ -505,7 +514,7 @@ footer.site li a:hover{color:var(--silver-bright)}
     <div class="nav-cta">
       <a class="btn btn--primary" href="https://discord.com/invite/rxqqBS8" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4.4A19 19 0 0 0 15.3 3l-.2.4a17 17 0 0 1 4.2 1.3 17 17 0 0 0-14.6 0A17 17 0 0 1 8.9 3.4L8.7 3A19 19 0 0 0 4 4.4 19.6 19.6 0 0 0 .6 17.5 19 19 0 0 0 6.4 20l.5-1a13 13 0 0 1-2-1l.5-.4a13.6 13.6 0 0 0 11.6 0l.5.4-2 1 .5 1a19 19 0 0 0 5.8-2.5A19.5 19.5 0 0 0 20 4.4ZM8.5 14.7c-1 0-1.8-1-1.8-2.1s.8-2.1 1.8-2.1 1.8 1 1.8 2.1-.8 2.1-1.8 2.1Zm7 0c-1 0-1.8-1-1.8-2.1s.8-2.1 1.8-2.1 1.8 1 1.8 2.1-.8 2.1-1.8 2.1Z"/></svg>
-        Discord
+        <span class="btn-label">Discord</span>
       </a>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Basculer le thème clair / sombre">
         <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg>
@@ -524,7 +533,7 @@ footer.site li a:hover{color:var(--silver-bright)}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow" data-reveal>Association rôliste · depuis 2016</span>
-      <h1 data-reveal data-d="1">Soutenez le jeu de rôle.<br><span class="glow">Rejoignez l'Union.</span></h1>
+      <h1 data-reveal data-d="1">Soutenez le jeu de rôle.<br><span class="glow">Rejoignez UnionRôlistes.</span></h1>
       <p class="lead" data-reveal data-d="2">
         L'Union des Rôlistes fédère <b>rôlistes, clubs, boutiques et auteurs indépendants</b>
         sous une même bannière, pour promouvoir le JDR sous toutes ses formes et offrir un lieu
@@ -535,7 +544,7 @@ footer.site li a:hover{color:var(--silver-bright)}
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.3 8.3 1.7 4.5 5.2 4.5c2 0 3.3 1.2 3.9 2.2.6-1 2-2.2 3.9-2.2 0 0 0 0 0 0 .2 0 .2 0 .2 0 1.9 0 3.3 1.2 3.9 2.2.6-1 1.9-2.2 3.9-2.2 3.5 0 4.9 3.8 3.2 7.2C19.5 16.4 12 21 12 21Z"/></svg>
           Soutenir l'association
         </a>
-        <a class="btn btn--ghost" href="#asso">Découvrir l'Union →</a>
+        <a class="btn btn--ghost" href="#asso">Découvrir UnionRôlistes →</a>
       </div>
 
       <div class="hero-stats" data-reveal data-d="4">
@@ -594,7 +603,7 @@ footer.site li a:hover{color:var(--silver-bright)}
         </div>
         <div class="fact">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <div><div class="k">5 rue Fernand Pelloutier</div><div class="v">75017 Paris</div></div>
+          <div><div class="k">Siège à Paris</div><div class="v">Île-de-France</div></div>
         </div>
       </div>
     </div>
@@ -736,7 +745,7 @@ footer.site li a:hover{color:var(--silver-bright)}
       <div class="shop-tease">
         <div style="flex:1;min-width:240px">
           <span class="eyebrow">Notre boutique</span>
-          <h2 style="font-size:clamp(1.6rem,3vw,2.3rem);margin:.6rem 0 0">La boutique de l'Union arrive bientôt</h2>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.3rem);margin:.6rem 0 0">La boutique UnionRôlistes arrive bientôt</h2>
           <p style="color:var(--parch);margin:1rem 0 0;font-weight:300">Restez à l'affût sur notre Discord pour être prévenu·e dès son ouverture.</p>
         </div>
         <div class="soon">Prochainement</div>
@@ -785,7 +794,7 @@ footer.site li a:hover{color:var(--silver-bright)}
         </div>
         <p>Fédérer, promouvoir et soutenir le jeu de rôle sous toutes ses formes.</p>
         <p>Association loi 1901 · marque déposée.</p>
-        <p>5 rue Fernand Pelloutier, 75017 Paris</p>
+        <p>Siège à Paris (Île-de-France)</p>
       </div>
       <div>
         <h4>Naviguer</h4>
