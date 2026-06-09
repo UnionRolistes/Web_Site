@@ -1,3 +1,8 @@
+- Changelog for v0.3.0 (2026-06-09)
+    * Refonte graphique globale : nouvelle one-page (charte enluminee, Cinzel + Spectral, animations)
+    * Palette noir / argent / gris (suppression du dore)
+    * Page autonome : anciens includes pages/ et feuilles css/ retires (#15)
+
 - Changelog for v0.2.5 (2022-02-04)
     * correction du readme
 
