@@ -653,24 +653,24 @@ footer.site li a:hover{color:var(--silver-bright)}
         <p class="intro">L'Union des Rôlistes rassemble et fédère associations, clubs, boutiques, auteurs indépendants et rôlistes isolés autour de projets et d'objectifs communs.</p>
         <p>Notre but : favoriser la découverte et le loisir ludique, et faire vivre le jeu de rôle sous toutes ses formes. L'Union n'a pas vocation à supplanter les structures existantes ni à s'immiscer dans leur fonctionnement&nbsp;: nous proposons des <b>actions coordonnées</b> et nous favorisons le dialogue entre passionnés.</p>
         <blockquote class="pull">« Améliorer l'image du jeu de rôle auprès du grand public, et offrir un lieu safe et neutre, quels que soient votre genre, votre neuroatypie, vos origines, votre religion ou vos idéaux. »</blockquote>
-        <p>Née comme collectif en août 2016, l'Union est aujourd'hui une association loi 1901, déclarée le 11 mai 2019 et enregistrée à l'INSEE le 29 avril 2019, et agit en collaboration avec la FédéGN.</p>
+        <p>Née comme collectif en août 2016, l'Union des Rôlistes est aujourd'hui une association loi 1901, déclarée le 11 mai 2019 et enregistrée à l'INSEE le 29 avril 2019, et agit en collaboration avec la FédéGN.</p>
       </div>
 
       <div class="facts" data-reveal data-d="2">
         <div class="fact">
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a2 2 0 0 1 2 2 2 2 0 0 1-2 2H9v10a2 2 0 0 1-2 2 2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M9 8V6a2 2 0 0 0-4 0M11 11.5h5M11 14.5h5"/></svg></span>
           <div><div class="k">Association loi 1901</div><div class="v">Déclarée le 11/05/2019, à but non lucratif</div></div>
         </div>
         <div class="fact">
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9.5" r="5"/><path d="m9 13.8-1.3 7 4.3-2.4 4.3 2.4-1.3-7"/><path d="m10 9.5 1.4 1.4L14.5 8"/></svg></span>
           <div><div class="k">Enregistrée à l'INSEE</div><div class="v">Le 29/04/2019 · SIRET 850 580 663</div></div>
         </div>
         <div class="fact">
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a1.5 1.5 0 0 1 1.5 1.5v13.5H6.5A1.5 1.5 0 0 1 5 18z"/><path d="M5 18a1.5 1.5 0 0 1 1.5-1.5h11M9 9h5"/></svg></span>
           <div><div class="k">RNA W751252183</div><div class="v">Registre national des associations</div></div>
         </div>
         <div class="fact">
-          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 9 4l6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span>
           <div><div class="k">Siège à Paris</div><div class="v">Île-de-France</div></div>
         </div>
       </div>
@@ -689,22 +689,22 @@ footer.site li a:hover{color:var(--silver-bright)}
 
     <div class="values" style="margin-top:3rem">
       <article class="value" data-reveal data-d="1">
-        <div class="vic"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"><path d="M50 8 88 30v40L50 92 12 70V30Z"/><circle cx="50" cy="38" r="4" fill="currentColor"/><circle cx="35" cy="58" r="4" fill="currentColor"/><circle cx="65" cy="58" r="4" fill="currentColor"/></svg></div>
+        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2 21 7v10l-9 5-9-5V7Z"/><path d="M7.5 9.2h9L12 21ZM3.2 7.2 7.5 9.2M20.8 7.2 16.5 9.2M7.5 9.2 12 2l4.5 7.2M7.5 9.2 4 16.5M16.5 9.2 20 16.5"/></svg></div>
         <h3>Promouvoir le JDR</h3>
         <p>Faire connaître et faire vivre le jeu de rôle sous toutes ses formes, et favoriser la découverte de ce loisir.</p>
       </article>
       <article class="value" data-reveal data-d="2">
-        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5M15 20c0-2 .8-3.5 2-4.3"/></svg></div>
+        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18"/><path d="M6 4h12l-3 4 3 4H6"/></svg></div>
         <h3>Fédérer</h3>
         <p>Réunir associations, clubs, boutiques et joueurs isolés sous une même bannière, autour d'objectifs communs.</p>
       </article>
       <article class="value" data-reveal data-d="3">
-        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1.6 1.8 3.2 3 3.2 5.2a3.2 3.2 0 0 1-6.4 0c0-1 .4-1.8 1-2.6"/><path d="M10 11.5h4l-1 9.5h-2z"/></svg></div>
         <h3>Améliorer l'image</h3>
         <p>Changer le regard du grand public sur le JDR par des initiations et des activités ouvertes à toutes et tous.</p>
       </article>
       <article class="value" data-reveal data-d="4">
-        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 5 6v5c0 4.5 3 7.6 7 9 4-1.4 7-4.5 7-9V6Z"/><path d="M12 8v5M9.5 10.5h5"/></svg></div>
+        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3.5h16V10c0 5.6-4 8.9-8 11.5-4-2.6-8-5.9-8-11.5z"/><path d="M12 3.5v18M4 9.5h16"/></svg></div>
         <h3>Lieu safe &amp; neutre</h3>
         <p>Un espace accueillant quels que soient votre genre, votre neuroatypie, vos origines ou vos convictions.</p>
       </article>
@@ -715,11 +715,37 @@ footer.site li a:hover{color:var(--silver-bright)}
 <!-- ============ PRESTATIONS ============ -->
 <section id="prestations">
   <div class="wrap">
-    <div class="band" data-reveal>
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Nos prestations</span>
+      <h2>Ce que nous proposons</h2>
+    </div>
+    <div class="values" style="margin-top:2.5rem">
+      <article class="value" data-reveal data-d="1">
+        <div class="vic"><svg class="ico-sword" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.3 2.2v9.3h-2.6V4.2z"/><path d="M7.5 13.5h9M12 13.5v5.3M9.8 18.8h4.4"/></svg></div>
+        <h3>Animation escrime ludique</h3>
+        <p>Pour animer vos événements.</p>
+      </article>
+      <article class="value" data-reveal data-d="2">
+        <div class="vic"><svg class="ico-chest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18v9H3z"/><path d="M3 14h18"/><g class="lid"><path d="M3 11c0-2.5 4-4.5 9-4.5s9 2 9 4.5"/></g><rect x="10.7" y="12.3" width="2.6" height="3.4" rx=".5"/></svg></div>
+        <h3>Location de matériel</h3>
+        <p>Talkies-walkies, CB, Nerf.</p>
+      </article>
+      <article class="value" data-reveal data-d="3">
+        <div class="vic"><svg class="ico-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path class="needle" d="M16.5 7.5 14 14l-6.5 2.5L10 10Z"/></svg></div>
+        <h3>Aide logistique personnalisée</h3>
+        <p>Sur mesure pour votre projet.</p>
+      </article>
+      <article class="value" data-reveal data-d="4">
+        <div class="vic"><svg class="ico-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="2.5"/><g class="antenna"><path d="M12 4v4"/><circle cx="12" cy="3.2" r="1.1"/></g><circle cx="9.6" cy="13" r="1.1"/><circle cx="14.4" cy="13" r="1.1"/><path d="M9.6 16h4.8M3 12.5v2M21 12.5v2"/></svg></div>
+        <h3>Bot planning</h3>
+        <p>À disposition sur votre serveur.</p>
+      </article>
+    </div>
+    <div class="band" data-reveal style="margin-top:2.5rem">
       <div class="band-grid">
         <div>
-          <span class="eyebrow">Nos prestations</span>
-          <h2>Une demande de prestation&nbsp;?</h2>
+          <span class="eyebrow">Une demande&nbsp;?</span>
+          <h2>Parlons de votre projet</h2>
           <p>Pour toute demande de prestation, contactez l'Union des Rôlistes par e-mail&nbsp;: nous vous répondrons directement.</p>
         </div>
         <div class="right">
@@ -758,7 +784,7 @@ footer.site li a:hover{color:var(--silver-bright)}
         <span class="tag">1,4% de frais</span>
         <h3>PayPal</h3>
         <div class="fees">Don rapide &amp; sécurisé <small>· carte ou compte PayPal</small></div>
-        <p>Préférez la simplicité&nbsp;? Soutenez l'Union en quelques clics via PayPal, par carte ou avec votre compte.</p>
+        <p>Préférez la simplicité&nbsp;? Soutenez l'Union des Rôlistes en quelques clics via PayPal, par carte ou avec votre compte.</p>
         <a class="btn btn--ghost" href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS" target="_blank" rel="noopener">
           Faire un don
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -774,7 +800,7 @@ footer.site li a:hover{color:var(--silver-bright)}
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Nos partenaires</span>
       <h2>Un réseau de passionnés</h2>
-      <p>L'Union travaille main dans la main avec des communautés, des lieux et des outils qui font vivre le jeu de rôle.</p>
+      <p>L'Union des Rôlistes travaille main dans la main avec des communautés, des lieux et des outils qui font vivre le jeu de rôle.</p>
     </div>
 
     <div class="part-group" data-reveal data-d="1">
@@ -828,7 +854,7 @@ footer.site li a:hover{color:var(--silver-bright)}
     <div class="cta-discord" data-reveal>
       <span class="eyebrow center">Rejoignez l'aventure</span>
       <h2>Plus de 1300 rôlistes vous attendent</h2>
-      <p>Discussions, salons vocaux &amp; textuels gratuits, plus de 80 jeux de rôle joués, et toute l'entraide d'une communauté passionnée : la vie de l'Union se passe sur Discord.</p>
+      <p>Discussions, salons vocaux &amp; textuels gratuits, plus de 80 jeux de rôle joués, et toute l'entraide d'une communauté passionnée : la vie de l'Union des Rôlistes se passe sur Discord.</p>
       <a class="btn btn--primary" href="https://discord.com/invite/rxqqBS8" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4.4A19 19 0 0 0 15.3 3l-.2.4a17 17 0 0 1 4.2 1.3 17 17 0 0 0-14.6 0A17 17 0 0 1 8.9 3.4L8.7 3A19 19 0 0 0 4 4.4 19.6 19.6 0 0 0 .6 17.5 19 19 0 0 0 6.4 20l.5-1a13 13 0 0 1-2-1l.5-.4a13.6 13.6 0 0 0 11.6 0l.5.4-2 1 .5 1a19 19 0 0 0 5.8-2.5A19.5 19.5 0 0 0 20 4.4ZM8.5 14.7c-1 0-1.8-1-1.8-2.1s.8-2.1 1.8-2.1 1.8 1 1.8 2.1-.8 2.1-1.8 2.1Zm7 0c-1 0-1.8-1-1.8-2.1s.8-2.1 1.8-2.1 1.8 1 1.8 2.1-.8 2.1-1.8 2.1Z"/></svg>
         Rejoindre le Discord
