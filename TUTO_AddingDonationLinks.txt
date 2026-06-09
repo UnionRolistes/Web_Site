@@ -1,12 +1,20 @@
-Dans src/www/pages/dons.html
+Les plateformes de dons sont dans src/www/index.php, section <section id="soutenir">.
 
-(C'est du pur html)
+(C'est du pur HTML, pas de base de données.)
 
-# Pour rajouter le lien BitPay :
-Ligne 35 : Remplacer href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS" par href="[lienBitPay]"
+Chaque plateforme est une "carte" <article class="donate ..."> qui contient :
+- le badge de frais : <span class="tag"> (ex. "0% de frais")
+- le nom : <h3>
+- le détail des frais : <div class="fees">
+- un descriptif : <p>
+- le bouton de don : <a class="btn ..." href="..."> (c'est lui qui porte le lien)
 
-# Pour rajouter un nouveau lien :
-Demandez à un développeur, ou bien inspirez vous des liens déjà présent : 
-vous devez rajouter une ligne à la ligne 13, 22 et 36. Correspondant respectivement au titre de la colonne, aux frais et au lien
-Inspirez vous du code des images déjà présentes pour en rajouter
-Attention, au delà d'un certain nombre de plateformes de dons, il faudra peut-être faire du design css en plus pour pas que le tableau déborde
+# Changer le lien d'une plateforme existante :
+Repérer sa carte, puis remplacer l'URL du href du bouton <a class="btn ...">.
+Ex. PayPal : href="https://www.paypal.com/donate?hosted_button_id=DJ7VAZJGW3VNS"
+
+# Ajouter une nouvelle plateforme :
+Dupliquer un bloc <article class="donate ...">...</article> dans <div class="support">, puis adapter le tag, le <h3>, les frais, le <p> et le href du bouton.
+- carte mise en avant : classe "donate featured" ; cartes normales : "donate plain"
+- bouton principal : "btn btn--primary" ; boutons secondaires : "btn btn--ghost"
+La grille est responsive, aucun CSS à toucher.

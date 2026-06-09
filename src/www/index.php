@@ -490,7 +490,7 @@ footer.site li a:hover{color:var(--silver-bright)}
       </div>
 
       <div class="hero-stats" data-reveal data-d="4">
-        <div class="stat"><div class="num"><span data-count="1004">0</span><span style="color:var(--silver)">+</span></div><div class="lbl">membres Discord</div></div>
+        <div class="stat"><div class="num"><span data-count="1300">0</span><span style="color:var(--silver)">+</span></div><div class="lbl">membres Discord</div></div>
         <div class="stat"><div class="num"><span data-count="2016">0</span></div><div class="lbl">collectif fondateur</div></div>
         <div class="stat"><div class="num"><span data-count="9">0</span></div><div class="lbl">partenaires</div></div>
         <div class="stat"><div class="num">2019</div><div class="lbl">association déclarée</div></div>
@@ -527,7 +527,7 @@ footer.site li a:hover{color:var(--silver-bright)}
         <p class="intro">L'Union des Rôlistes rassemble et fédère associations, clubs, boutiques, auteurs indépendants et rôlistes isolés autour de projets et d'objectifs communs.</p>
         <p>Notre but : favoriser la découverte et le loisir ludique, et faire vivre le jeu de rôle sous toutes ses formes. L'Union n'a pas vocation à supplanter les structures existantes ni à s'immiscer dans leur fonctionnement&nbsp;: nous proposons des <b>actions coordonnées</b> et nous favorisons le dialogue entre passionnés.</p>
         <blockquote class="pull">« Améliorer l'image du jeu de rôle auprès du grand public, et offrir un lieu safe et neutre, quels que soient votre genre, votre neuroatypie, vos origines, votre religion ou vos idéaux. »</blockquote>
-        <p>Née comme collectif en août 2016, l'Union est aujourd'hui une association loi 1901, déclarée le 11 mai 2019 et enregistrée à l'INSEE le 29 avril 2019.</p>
+        <p>Née comme collectif en août 2016, l'Union est aujourd'hui une association loi 1901, déclarée le 11 mai 2019 et enregistrée à l'INSEE le 29 avril 2019, et agit en collaboration avec la FédéGN.</p>
       </div>
 
       <div class="facts" data-reveal data-d="2">
@@ -701,8 +701,8 @@ footer.site li a:hover{color:var(--silver-bright)}
   <div class="wrap">
     <div class="cta-discord" data-reveal>
       <span class="eyebrow center">Rejoignez l'aventure</span>
-      <h2>Plus de 1000 rôlistes vous attendent</h2>
-      <p>Discussions, salons vocaux &amp; textuels gratuits, et toute l'entraide d'une communauté passionnée : la vie de l'Union se passe sur Discord.</p>
+      <h2>Plus de 1300 rôlistes vous attendent</h2>
+      <p>Discussions, salons vocaux &amp; textuels gratuits, plus de 80 jeux de rôle joués, et toute l'entraide d'une communauté passionnée : la vie de l'Union se passe sur Discord.</p>
       <a class="btn btn--primary" href="https://discord.com/invite/rxqqBS8" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4.4A19 19 0 0 0 15.3 3l-.2.4a17 17 0 0 1 4.2 1.3 17 17 0 0 0-14.6 0A17 17 0 0 1 8.9 3.4L8.7 3A19 19 0 0 0 4 4.4 19.6 19.6 0 0 0 .6 17.5 19 19 0 0 0 6.4 20l.5-1a13 13 0 0 1-2-1l.5-.4a13.6 13.6 0 0 0 11.6 0l.5.4-2 1 .5 1a19 19 0 0 0 5.8-2.5A19.5 19.5 0 0 0 20 4.4ZM8.5 14.7c-1 0-1.8-1-1.8-2.1s.8-2.1 1.8-2.1 1.8 1 1.8 2.1-.8 2.1-1.8 2.1Zm7 0c-1 0-1.8-1-1.8-2.1s.8-2.1 1.8-2.1 1.8 1 1.8 2.1-.8 2.1-1.8 2.1Z"/></svg>
         Rejoindre le Discord
