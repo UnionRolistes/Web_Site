@@ -192,6 +192,46 @@ body::after{
 html[data-theme="light"] .page-trame{filter:brightness(0) invert(.12);opacity:.05}
 @media (max-width:700px){.page-trame{width:min(420px,82vw);opacity:.03}}
 
+/* Braises / poussière qui dérivent lentement dans l'ombre (ambiance, mode sombre uniquement) */
+.embers{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.ember{position:absolute;bottom:-20px;border-radius:50%;background:radial-gradient(circle,rgba(207,214,223,.8),transparent 70%);opacity:0;animation:emberRise linear infinite}
+@keyframes emberRise{0%{transform:translateY(0) translateX(0);opacity:0}12%{opacity:var(--o,.4)}88%{opacity:var(--o,.4)}100%{transform:translateY(-108vh) translateX(var(--dx,8px));opacity:0}}
+html[data-theme="light"] .embers{display:none}
+@media (prefers-reduced-motion:reduce){.embers{display:none}}
+
+/* Secrets : forme invisible de base ; un petit point scintille faiblement de temps en temps ; révélés au survol (desktop, sombre) */
+.secret{position:absolute; width:52px; height:auto; pointer-events:none; z-index:0}
+.secret .shape{display:block; width:100%; height:auto; color:var(--silver); filter:drop-shadow(0 0 5px rgba(207,214,223,.55));
+  -webkit-mask-image:radial-gradient(60px circle at var(--lx,-999px) var(--ly,-999px), #000 24%, rgba(0,0,0,.25) 56%, transparent 80%);
+  mask-image:radial-gradient(60px circle at var(--lx,-999px) var(--ly,-999px), #000 24%, rgba(0,0,0,.25) 56%, transparent 80%)}
+@supports not ((mask-image:radial-gradient(#000,#000)) or (-webkit-mask-image:radial-gradient(#000,#000))){.secret .shape{display:none}}
+.secret.hydra{width:58px}
+.secret.hydra .shape{filter:brightness(0) invert(.85) drop-shadow(0 0 7px rgba(207,214,223,.4))}
+.secret .spark{position:absolute; top:50%; left:50%; width:10px; height:10px; margin:-5px 0 0 -5px; border-radius:50%; background:radial-gradient(circle, rgba(231,236,242,.7) 0%, rgba(231,236,242,.2) 38%, transparent 72%); filter:blur(.4px); opacity:0; animation:secretSpark 9s ease-in-out infinite}
+@keyframes secretSpark{0%,90%,100%{opacity:0}95%{opacity:.45}}
+html[data-theme="light"] .secret{display:none}
+@media (hover:none){.secret{display:none}}
+@media (prefers-reduced-motion:reduce){.secret .spark{animation:none}}
+/* Code secret (Konami / "hydre") : révèle tous les secrets d'un coup */
+body.secrets-revealed .secret{display:block}
+body.secrets-revealed .secret .shape{-webkit-mask-image:none;mask-image:none;animation:secretReveal .8s ease both}
+body.secrets-revealed .secret .spark{display:none}
+@keyframes secretReveal{0%{opacity:0;transform:scale(.6)}60%{opacity:.85;transform:scale(1.12)}100%{opacity:.7;transform:scale(1)}}
+.secret-toast{position:fixed;left:50%;bottom:32px;translate:-50% 12px;z-index:80;font-family:"UR Serif",serif;font-size:.9rem;letter-spacing:.03em;color:var(--cream);background:linear-gradient(180deg,var(--panel-2),var(--ink-2));border:1px solid var(--line);padding:.7em 1.25em;border-radius:999px;box-shadow:var(--shadow);opacity:0;transition:opacity .5s ease,translate .5s ease;pointer-events:none}
+.secret-toast.show{opacity:1;translate:-50% 0}
+@media (prefers-reduced-motion:reduce){body.secrets-revealed .secret .shape{animation:none;opacity:.7}}
+
+/* Lettrine enluminée sur l'intro du manifeste */
+.manifesto .body p.intro::first-letter{
+  float:left; font-family:"UR Serif",serif; font-weight:900;
+  font-size:3.05em; line-height:.9;
+  margin:.04em .22em .02em 0; padding:.1em .2em;
+  color:var(--silver-bright);
+  background:linear-gradient(180deg,var(--panel-2),var(--ink-2));
+  border:1px solid var(--line); border-radius:7px;
+  box-shadow:var(--glow);
+}
+
 h1,h2,h3,.font-display{font-family:"UR Serif", serif;font-weight:700;letter-spacing:.5px;line-height:1.12;color:var(--cream);text-wrap:balance}
 p,.lead{text-wrap:pretty}
 a{color:inherit;text-decoration:none}
@@ -556,19 +596,22 @@ footer.site li a:hover{color:var(--silver-bright)}
 <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-<img class="page-trame" src="img/hydre.png" alt="" aria-hidden="true">
+<a href="#contenu" class="skip-link">Aller au contenu</a>
+<img class="page-trame" src="img/hydre.png" alt="" aria-hidden="true" loading="lazy">
+<div class="embers" aria-hidden="true"><span class="ember" style="left:6%;width:3px;height:3px;--o:.4;--dx:12px;animation-duration:22s;animation-delay:-3s"></span><span class="ember" style="left:14%;width:2px;height:2px;--o:.3;--dx:-10px;animation-duration:26s;animation-delay:-12s"></span><span class="ember" style="left:23%;width:4px;height:4px;--o:.32;--dx:18px;animation-duration:19s;animation-delay:-7s"></span><span class="ember" style="left:31%;width:2px;height:2px;--o:.42;--dx:-6px;animation-duration:24s;animation-delay:-18s"></span><span class="ember" style="left:39%;width:3px;height:3px;--o:.3;--dx:14px;animation-duration:21s;animation-delay:-2s"></span><span class="ember" style="left:47%;width:2px;height:2px;--o:.38;--dx:-16px;animation-duration:27s;animation-delay:-14s"></span><span class="ember" style="left:55%;width:3px;height:3px;--o:.34;--dx:8px;animation-duration:18s;animation-delay:-9s"></span><span class="ember" style="left:63%;width:4px;height:4px;--o:.28;--dx:-12px;animation-duration:23s;animation-delay:-5s"></span><span class="ember" style="left:70%;width:2px;height:2px;--o:.42;--dx:16px;animation-duration:25s;animation-delay:-20s"></span><span class="ember" style="left:78%;width:3px;height:3px;--o:.33;--dx:-8px;animation-duration:20s;animation-delay:-11s"></span><span class="ember" style="left:85%;width:2px;height:2px;--o:.4;--dx:10px;animation-duration:28s;animation-delay:-4s"></span><span class="ember" style="left:92%;width:3px;height:3px;--o:.3;--dx:-14px;animation-duration:22s;animation-delay:-16s"></span><span class="ember" style="left:18%;width:2px;height:2px;--o:.3;--dx:6px;animation-duration:30s;animation-delay:-23s"></span><span class="ember" style="left:60%;width:2px;height:2px;--o:.34;--dx:-6px;animation-duration:29s;animation-delay:-26s"></span></div>
 
 <!-- ============ HEADER ============ -->
 <header class="site" id="top">
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Accueil, L'Union des Rôlistes">
-      <img class="crest" src="img/hydre.png" alt="">
+      <img class="crest" src="img/hydre.png" alt="" fetchpriority="high">
       <span>
         <b>L'Union des Rôlistes</b>
         <small>Association loi 1901</small>
       </span>
     </a>
 
+    <nav aria-label="Navigation principale" style="display:contents">
     <ul class="nav-links" id="navLinks">
       <li><a href="#asso">À propos</a></li>
       <li><a href="#valeurs">Nos valeurs</a></li>
@@ -631,17 +674,19 @@ footer.site li a:hover{color:var(--silver-bright)}
         <svg class="die d-a" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><polygon points="60,8 110,46 60,112 10,46"/><path d="M10,46 60,64 110,46 M60,8 41,50 79,50 M41,50 60,64 79,50 M60,64 60,112"/></svg>
         <svg class="die d-b" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><polygon points="60,8 110,46 60,112 10,46"/><path d="M10,46 60,64 110,46 M60,8 41,50 79,50 M41,50 60,64 79,50 M60,64 60,112"/></svg>
         <svg class="die d-c" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><polygon points="60,8 110,46 60,112 10,46"/><path d="M10,46 60,64 110,46 M60,8 41,50 79,50 M41,50 60,64 79,50 M60,64 60,112"/></svg>
-        <img class="hydre" id="hydre" src="img/hydre.png" alt="Blason de l'Union des Rôlistes : une hydre à trois têtes lançant un dé à 20 faces" style="content-visibility:auto">
-        <div class="dice-pop" aria-hidden="true"></div>
+        <img class="hydre" id="hydre" src="img/hydre.png" alt="Blason de l'Union des Rôlistes : une hydre à trois têtes lançant les dés">
+        <div class="dice-pop" role="status" aria-live="polite"></div>
       </div>
     </div>
   </div>
 </section>
 
-<hr class="divider">
+<div class="ornament" aria-hidden="true"><span class="o-l"></span><svg viewBox="0 0 48 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 2l3.5 6-3.5 6-3.5-6z"/><path d="M20.5 8h-6M14.5 8c-2-2.2-4.2-2.2-6.5 0M14.5 8c-2 2.2-4.2 2.2-6.5 0M27.5 8h6M33.5 8c2-2.2 4.2-2.2 6.5 0M33.5 8c2 2.2 4.2 2.2 6.5 0"/></svg><span class="o-l"></span></div>
 
 <!-- ============ QUI SOMMES-NOUS ============ -->
 <section id="asso">
+  <div class="secret" style="top:70%;right:5%"><svg class="shape" viewBox="0 0 24 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="4"/><path d="M10 7h12M19 7v4M16 7v3"/></svg><span class="spark" style="animation-delay:-9s;animation-duration:9s"></span></div>
+  <div class="secret" style="top:13%;left:3%"><svg class="shape" viewBox="0 0 30 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2v20M5 9l6-5M5 9l6 5"/><path d="M16 2v20M16 2l6 6M16 11h6M16 20l6-6"/></svg><span class="spark" style="animation-delay:-1s;animation-duration:9s"></span></div>
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Qui sommes-nous</span>
@@ -680,6 +725,8 @@ footer.site li a:hover{color:var(--silver-bright)}
 
 <!-- ============ VALEURS ============ -->
 <section id="valeurs">
+  <div class="secret" style="top:18%;left:4%"><svg class="shape" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 3 10 13M20 3v3.5M20 3h-3.5"/><path d="M10 13l1.5 1.5M7.5 13.5l3 3-3 3-3-3z"/></svg><span class="spark" style="animation-delay:-4.5s;animation-duration:10.5s"></span></div>
+  <div class="secret" style="top:58%;right:4%"><svg class="shape" viewBox="0 0 44 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c3-5 11-5 14 0-3 5-11 5-14 0Z"/><circle cx="9" cy="8" r="2"/><path d="M28 8c3-5 11-5 14 0-3 5-11 5-14 0Z"/><circle cx="35" cy="8" r="2"/></svg><span class="spark" style="animation-delay:-5s;animation-duration:11s"></span></div>
   <div class="wrap">
     <div class="sec-head center" data-reveal>
       <span class="eyebrow center">Nos valeurs</span>
@@ -714,6 +761,7 @@ footer.site li a:hover{color:var(--silver-bright)}
 
 <!-- ============ PRESTATIONS ============ -->
 <section id="prestations">
+  <div class="secret" style="top:20%;right:4%"><svg class="shape" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M12 2 21 7v10l-9 5-9-5V7Z"/><path d="M7.5 9.2h9L12 21ZM7.5 9.2 12 2l4.5 7.2M7.5 9.2 4 16.5M16.5 9.2 20 16.5"/></svg><span class="spark" style="animation-delay:-3s;animation-duration:11s"></span></div>
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Nos prestations</span>
@@ -796,6 +844,7 @@ footer.site li a:hover{color:var(--silver-bright)}
 
 <!-- ============ PARTENAIRES ============ -->
 <section id="partenaires">
+  <div class="secret hydra" style="bottom:16%;right:5%"><img class="shape" src="img/hydre.png" alt="" loading="lazy"><span class="spark" style="animation-delay:-2.5s;animation-duration:12s"></span></div>
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Nos partenaires</span>
@@ -834,6 +883,7 @@ footer.site li a:hover{color:var(--silver-bright)}
 
 <!-- ============ BOUTIQUE ============ -->
 <section id="boutique">
+  <div class="secret" style="top:30%;left:5%"><svg class="shape" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.5h4M9 3v4.5l-4.2 8.4A3 3 0 0 0 7.5 20.5h5a3 3 0 0 0 2.7-4.6L11 7.5V3"/><path d="M6.3 14.5h7.4"/></svg><span class="spark" style="animation-delay:-7s;animation-duration:10s"></span></div>
   <div class="wrap">
     <div class="band" data-reveal>
       <div class="shop-tease">
@@ -850,6 +900,7 @@ footer.site li a:hover{color:var(--silver-bright)}
 
 <!-- ============ COMMUNAUTÉ / DISCORD ============ -->
 <section id="discord">
+  <div class="secret" style="top:32%;left:6%"><svg class="shape" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v20M4 8l6-6 6 6M4 16l6 6 6-6"/></svg><span class="spark" style="animation-delay:-6s;animation-duration:9.5s"></span></div>
   <div class="wrap">
     <div class="cta-discord" data-reveal>
       <span class="eyebrow center">Rejoignez l'aventure</span>
@@ -878,12 +929,15 @@ footer.site li a:hover{color:var(--silver-bright)}
 </section>
 
 <!-- ============ FOOTER ============ -->
+</main>
+
 <footer class="site">
+  <div class="secret" style="top:30%;right:6%"><svg class="shape" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M10 2.5a2.6 2.6 0 0 1 2.6 2.6c0 1.1-.7 1.9-1.5 2.4 1.9.7 3.4 2.2 4.3 3.9l-2.8 1.4 1 9.7H6.4l1-9.7-2.8-1.4c.9-1.7 2.4-3.2 4.3-3.9-.8-.5-1.5-1.3-1.5-2.4A2.6 2.6 0 0 1 10 2.5Z"/></svg><span class="spark" style="animation-delay:-2s;animation-duration:12s"></span></div>
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <img src="img/hydre.png" alt="">
+          <img src="img/hydre.png" alt="" aria-hidden="true" loading="lazy">
           <b>L'Union des Rôlistes</b>
         </div>
         <p>Fédérer, promouvoir et soutenir le jeu de rôle sous toutes ses formes.</p>
@@ -1036,7 +1090,45 @@ footer.site li a:hover{color:var(--silver-bright)}
       var n=(rollN<demoRolls.length)?demoRolls[rollN]:1+Math.floor(Math.random()*100); rollN++;
       setTimeout(function(){showPop(n);},1150);
     });
+    medallion.addEventListener("keydown",function(e){
+      if(e.key==="Enter"||e.key===" "){e.preventDefault(); medallion.click();}
+    });
   }
+
+  /* secrets : le curseur révèle la forme quand on s'en approche (desktop) */
+  var secretEls=[].slice.call(doc.querySelectorAll(".secret"));
+  if(secretEls.length && window.matchMedia && matchMedia("(hover:hover)").matches){
+    var praf=0,px=0,py=0;
+    window.addEventListener("pointermove",function(e){
+      px=e.clientX; py=e.clientY;
+      if(praf)return;
+      praf=requestAnimationFrame(function(){praf=0;
+        for(var i=0;i<secretEls.length;i++){
+          var shape=secretEls[i].firstElementChild;
+          if(!shape)continue;
+          var r=shape.getBoundingClientRect();
+          shape.style.setProperty("--lx",(px-r.left)+"px");
+          shape.style.setProperty("--ly",(py-r.top)+"px");
+        }
+      });
+    },{passive:true});
+  }
+
+  /* code secret : taper "hydre" -> révèle tous les secrets */
+  var wbuf="";
+  function unlockSecrets(){
+    if(doc.body.classList.contains("secrets-revealed"))return;
+    doc.body.classList.add("secrets-revealed");
+    var t=doc.createElement("div"); t.className="secret-toast";
+    t.textContent="Les ombres se dissipent… secrets révélés";
+    doc.body.appendChild(t);
+    requestAnimationFrame(function(){t.classList.add("show");});
+    setTimeout(function(){t.classList.remove("show"); setTimeout(function(){t.remove();},600);},3800);
+  }
+  window.addEventListener("keydown",function(e){
+    var k=(e.key||"").toLowerCase();
+    if(k.length===1){wbuf=(wbuf+k).slice(-6); if(wbuf.indexOf("hydre")>=0)unlockSecrets();}
+  });
 })();
 </script>
 </body>
