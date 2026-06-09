@@ -73,7 +73,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
 /* =========================================================
    L'UNION DES RÔLISTES — refonte
    Direction : charte enluminée / bannière de guilde
-   Encre profonde · lumière de bougie dorée · grain parchemin
+   Encre profonde · lumière froide argentée · grain parchemin
    ========================================================= */
 
 :root{
@@ -117,7 +117,7 @@ html[data-theme="light"]{
   --cream:      #13161b;   /* titres / texte fort */
   --parch:      #2b303a;   /* texte courant plus foncé */
   --muted:      #49515d;
-  --muted-2:    #69717d;
+  --muted-2:    #595f6c;
   --silver:        #444d5b;
   --silver-bright: #1a1e26;
   --silver-deep:   #79828f;
@@ -261,7 +261,7 @@ img{max-width:100%;display:block}
 .btn svg{width:1.05em;height:1.05em}
 .btn--primary{background:linear-gradient(180deg,var(--silver-bright),var(--silver));color:#0e0f12;box-shadow:var(--glow)}
 .btn--primary:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(242,245,248,.5),0 26px 50px -18px rgba(206,213,222,.55)}
-.btn--ghost{background:rgba(243,231,207,.03);color:var(--cream);border-color:var(--line)}
+.btn--ghost{background:rgba(206,213,222,.03);color:var(--cream);border-color:var(--line)}
 .btn--ghost:hover{transform:translateY(-2px);border-color:var(--silver);color:var(--silver-bright);background:rgba(206,213,222,.06)}
 /* Icônes colorées au survol : cœur rouge sur "Soutenir", blurple sur Discord */
 .btn svg{transition:color .3s var(--ease)}
@@ -278,7 +278,7 @@ header.site{
   border-bottom:1px solid transparent;
 }
 header.site.scrolled{
-  background:rgba(20,17,15,.82);
+  background:rgba(14,15,18,.82);
   border-bottom-color:var(--line-soft);
   box-shadow:0 12px 30px -24px #000;
   backdrop-filter:blur(10px) saturate(120%);
