@@ -1,3 +1,14 @@
+- Changelog for v0.4.0 (2026-06-10)
+    * Effets rolistes : animations d'icones au survol, lettrine enluminee, separateurs heraldiques, braises flottantes en fond
+    * Blason interactif : jet de des d100 (critique <=5 / echec >=96), halo argente de l'hydre au survol, secrets caches reveles a la "torche" du curseur (code "hydre" pour tout reveler)
+    * Stats animees facon jet de des (1300+ membres, 9 partenaires) ; glossaire au survol (loi 1901, INSEE, RNA, FedeGN)
+    * Mise en page : menu mobile plein ecran, header sticky, espacement des sections homogene, menu desktop agrandi
+    * Accessibilite : landmarks main/nav, lien d'evitement, navigation clavier (medaillon), aria-live sur le resultat des des, prefers-reduced-motion respecte partout, alt corriges
+    * Conformite marque : suppression des residus chauds (vestiges dores/bruns) -> palette froide stricte
+    * Contraste : texte legal en mode clair remonte au seuil WCAG AA
+    * Performance : preload de la police, loading=lazy et fetchpriority sur les images
+    * Pied de page : credit "Site realise par ohugonnot"
+
 - Changelog for v0.3.0 (2026-06-09)
     * Refonte graphique globale : nouvelle one-page (charte enluminee, Cinzel + Spectral, animations)
     * Palette noir / argent / gris (suppression du dore)
