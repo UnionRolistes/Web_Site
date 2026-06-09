@@ -139,6 +139,7 @@ html[data-theme="light"] .donate.featured .tag{background:linear-gradient(180deg
 /* Logo/hydre/blasons : sombres en mode clair (au lieu de blancs) */
 html[data-theme="light"] .brand .crest{filter:brightness(0) invert(.12)}
 html[data-theme="light"] .medallion .hydre{filter:brightness(0) drop-shadow(0 8px 22px rgba(20,28,40,.25))}
+html[data-theme="light"] .medallion:hover .hydre{filter:brightness(0) drop-shadow(0 8px 22px rgba(20,28,40,.25)) drop-shadow(0 0 13px rgba(95,108,124,.28))}
 html[data-theme="light"] .hero-watermark{filter:brightness(0) invert(.1)}
 html[data-theme="light"] .foot-brand img{filter:brightness(0) invert(.12)}
 /* Pop de résultat : accents crit/échec lisibles sur fond clair */
@@ -389,11 +390,15 @@ html[data-theme="light"] .theme-toggle .i-moon{display:block}
 .ring.r3{inset:16%;border:1px solid var(--line-soft);background:radial-gradient(circle,#0a0c0f,#000)}
 html[data-theme="light"] .ring.r3{background:radial-gradient(circle,#ffffff,#e7eaef)}
 @keyframes spin{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.ring.r2{animation:none}}
+@media (prefers-reduced-motion:reduce){.ring.r2,.hero-watermark{animation:none}}
 .medallion .hydre{
   position:relative;z-index:3;width:58%;
   filter:brightness(0) invert(.92) drop-shadow(0 8px 22px rgba(0,0,0,.6));
+  transition:filter .55s ease;
 }
+/* l'hydre s'éveille au survol : léger halo argenté + dés ravivés */
+.medallion:hover .hydre{filter:brightness(0) invert(.92) drop-shadow(0 8px 22px rgba(0,0,0,.6)) drop-shadow(0 0 12px rgba(207,214,223,.22))}
+.medallion:hover .die{opacity:1}
 .medallion .seal{
   position:absolute;z-index:4;bottom:6%;left:50%;translate:-50% 0;
   font-family:"UR Serif",serif;font-weight:600;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;
