@@ -346,7 +346,8 @@ html[data-theme="light"] .theme-toggle .i-moon{display:block}
   box-shadow:inset 0 0 60px rgba(0,0,0,.7), var(--shadow);
 }
 .ring.r2{inset:9%;border:1px dashed rgba(206,213,222,.28);animation:spin 60s linear infinite}
-.ring.r3{inset:16%;border:1px solid var(--line-soft);background:radial-gradient(circle,var(--panel),var(--ink-2))}
+.ring.r3{inset:16%;border:1px solid var(--line-soft);background:radial-gradient(circle,#0a0c0f,#000)}
+html[data-theme="light"] .ring.r3{background:radial-gradient(circle,#ffffff,#e7eaef)}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.ring.r2{animation:none}}
 .medallion .hydre{
@@ -366,6 +367,42 @@ html[data-theme="light"] .theme-toggle .i-moon{display:block}
 @keyframes float1{50%{transform:translateY(-16px) rotate(12deg)}}
 @keyframes float2{50%{transform:translateY(14px) rotate(-14deg)}}
 @media (prefers-reduced-motion:reduce){.die{animation:none!important}}
+
+/* Sceau de résultat au lancer de dés : discret, au-dessus du médaillon, raccord charte */
+.dice-pop{
+  position:absolute; z-index:6; left:50%; bottom:100%; translate:-50% -16px;
+  display:inline-flex; align-items:baseline; gap:.42em; white-space:nowrap;
+  padding:.32em .8em; border-radius:999px;
+  background:linear-gradient(180deg,var(--panel-2),var(--ink-2));
+  border:1px solid var(--line); box-shadow:var(--shadow);
+  color:var(--cream); font-family:"UR Serif",serif;
+  opacity:0; scale:.7; pointer-events:none;
+  transition:opacity .2s var(--ease), scale .2s var(--ease);
+}
+.dice-pop.show{opacity:1; scale:1; animation:dicepop .5s var(--ease)}
+.dice-pop .pn{font-weight:900; font-size:1.05rem; line-height:1}
+.dice-pop .pl{font-size:.52rem; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+.dice-pop.crit{border-color:rgba(143,202,163,.55)}
+.dice-pop.crit .pl{color:#8fcaa3}
+.dice-pop.fail{border-color:rgba(224,114,111,.5)}
+.dice-pop.fail .pl{color:#e0726f}
+@keyframes dicepop{0%{rotate:-5deg;scale:.7}55%{rotate:2.5deg;scale:1.06}100%{rotate:0;scale:1}}
+@media (prefers-reduced-motion:reduce){.dice-pop.show{animation:none}}
+
+/* Micro-animations des icônes prestations au survol (desktop) */
+.ico-compass .needle{transform-box:view-box;transform-origin:12px 12px;transition:transform .55s var(--ease)}
+.value:hover .ico-compass .needle{transform:rotate(155deg)}
+.ico-chest .lid{transform-box:view-box;transform-origin:12px 11px;transition:transform .4s var(--ease)}
+.value:hover .ico-chest .lid{transform:translateY(-3px) rotate(-8deg)}
+.ico-robot .antenna{transform-box:view-box;transform-origin:12px 8px;transition:transform .35s var(--ease)}
+.value:hover .ico-robot .antenna{transform:rotate(14deg)}
+.ico-sword{transform-origin:center;transition:transform .3s var(--ease)}
+.value:hover .ico-sword{animation:swordWiggle .55s var(--ease)}
+@keyframes swordWiggle{0%,100%{transform:rotate(0)}30%{transform:rotate(-8deg) translateY(-1px)}65%{transform:rotate(5deg)}}
+@media (prefers-reduced-motion:reduce){
+  .value:hover .ico-compass .needle,.value:hover .ico-chest .lid,.value:hover .ico-robot .antenna{transform:none}
+  .value:hover .ico-sword{animation:none}
+}
 
 /* =========================================================
    SECTION FRAME
@@ -591,10 +628,11 @@ footer.site li a:hover{color:var(--silver-bright)}
         <div class="ring r2"></div>
         <div class="ring r3"></div>
         <!-- floating dice -->
-        <svg class="die d-a" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M50 6 92 30v40L50 94 8 70V30Z"/><path d="M50 6 50 38M8 30l30 14M92 30 62 44M38 44 50 94 62 44 38 44ZM38 44 8 70M62 44 92 70"/><text x="50" y="34" font-family="UR Serif" font-size="15" fill="currentColor" stroke="none" text-anchor="middle">20</text></svg>
-        <svg class="die d-b" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M50 6 92 30v40L50 94 8 70V30Z"/><path d="M50 6 50 38M8 30l30 14M92 30 62 44M38 44 50 94 62 44 38 44Z"/></svg>
-        <svg class="die d-c" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M50 6 92 30v40L50 94 8 70V30Z"/><path d="M50 6 50 38M8 30l30 14M92 30 62 44M38 44 50 94 62 44 38 44Z"/></svg>
+        <svg class="die d-a" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><polygon points="60,8 110,46 60,112 10,46"/><path d="M10,46 60,64 110,46 M60,8 41,50 79,50 M41,50 60,64 79,50 M60,64 60,112"/></svg>
+        <svg class="die d-b" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><polygon points="60,8 110,46 60,112 10,46"/><path d="M10,46 60,64 110,46 M60,8 41,50 79,50 M41,50 60,64 79,50 M60,64 60,112"/></svg>
+        <svg class="die d-c" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><polygon points="60,8 110,46 60,112 10,46"/><path d="M10,46 60,64 110,46 M60,8 41,50 79,50 M41,50 60,64 79,50 M60,64 60,112"/></svg>
         <img class="hydre" id="hydre" src="img/hydre.png" alt="Blason de l'Union des Rôlistes : une hydre à trois têtes lançant un dé à 20 faces" style="content-visibility:auto">
+        <div class="dice-pop" aria-hidden="true"></div>
       </div>
     </div>
   </div>
@@ -938,16 +976,39 @@ footer.site li a:hover{color:var(--silver-bright)}
     counters.forEach(function(el){el.textContent=(+el.getAttribute("data-count")).toLocaleString("fr-FR");});
   }
 
-  /* playful: click the crest to "roll" */
+  /* playful: clic sur le blason = jet de dés (les D10 roulent, résultat en pop BD) */
+  var medallion=doc.querySelector(".medallion");
   var hydre=doc.getElementById("hydre");
-  if(hydre){
-    hydre.style.cursor="pointer";
-    hydre.title="Lancez le dé !";
-    hydre.addEventListener("click",function(){
-      hydre.animate(
-        [{transform:"rotate(0) scale(1)"},{transform:"rotate(380deg) scale(1.08)"},{transform:"rotate(720deg) scale(1)"}],
-        {duration:900,easing:"cubic-bezier(.2,.7,.2,1)"}
-      );
+  var dice=[].slice.call(doc.querySelectorAll(".medallion .die"));
+  var pop=doc.querySelector(".dice-pop");
+  var rollN=0, demoRolls=[3,98];                 /* démo (d100) : 1er = réussite critique, 2e = échec critique, puis aléatoire */
+  if(medallion){
+    medallion.style.cursor="pointer";
+    medallion.title="Lancez les dés !";
+    var rolling=false, popTimer;
+    function showPop(n){
+      if(!pop){rolling=false;return;}
+      var crit=n<=5, fail=n>=96, disp=n<10?("0"+n):(""+n);
+      pop.className="dice-pop"+(crit?" crit":fail?" fail":"");
+      pop.innerHTML='<span class="pn">'+disp+'</span>'+(crit?'<span class="pl">Critique !</span>':fail?'<span class="pl">Échec !</span>':'');
+      void pop.offsetWidth; pop.classList.add("show");
+      clearTimeout(popTimer); popTimer=setTimeout(function(){pop.classList.remove("show");rolling=false;},1700);
+    }
+    medallion.addEventListener("click",function(){
+      if(rolling)return; rolling=true;
+      if(hydre){hydre.animate([{transform:"rotate(0) scale(1)"},{transform:"rotate(380deg) scale(1.06)"},{transform:"rotate(720deg) scale(1)"}],{duration:900,easing:"cubic-bezier(.2,.7,.2,1)"});}
+      dice.forEach(function(die,i){
+        var spins=360*(2+Math.floor(Math.random()*3));   /* tours COMPLETS (2 a 4) -> finit dans l'orientation d'origine, pas de flip */
+        var dur=900+i*150+Math.floor(Math.random()*220);
+        die.style.animation="none";
+        die.animate([
+          {transform:"translateY(0) rotate(0deg) scale(1)"},
+          {transform:"translateY(-28px) rotate("+(spins*0.55|0)+"deg) scale(1.14)",offset:.42},
+          {transform:"translateY(0) rotate("+spins+"deg) scale(1)"}
+        ],{duration:dur,easing:"cubic-bezier(.17,.7,.2,1)"}).onfinish=function(){die.style.animation="";};
+      });
+      var n=(rollN<demoRolls.length)?demoRolls[rollN]:1+Math.floor(Math.random()*100); rollN++;
+      setTimeout(function(){showPop(n);},1150);
     });
   }
 })();
