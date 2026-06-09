@@ -429,30 +429,67 @@ html[data-theme="light"] .ring.r3{background:radial-gradient(circle,#ffffff,#e7e
 @keyframes dicepop{0%{rotate:-5deg;scale:.7}55%{rotate:2.5deg;scale:1.06}100%{rotate:0;scale:1}}
 @media (prefers-reduced-motion:reduce){.dice-pop.show{animation:none}}
 
-/* Micro-animations des icônes prestations au survol (desktop) */
-.ico-compass .needle{transform-box:view-box;transform-origin:12px 12px;transition:transform .55s var(--ease)}
-.value:hover .ico-compass .needle{transform:rotate(155deg)}
-.ico-chest .lid{transform-box:view-box;transform-origin:12px 11px;transition:transform .4s var(--ease)}
-.value:hover .ico-chest .lid{transform:translateY(-3px) rotate(-8deg)}
-.ico-robot .antenna{transform-box:view-box;transform-origin:12px 8px;transition:transform .35s var(--ease)}
-.value:hover .ico-robot .antenna{transform:rotate(14deg)}
-.ico-sword{transform-origin:center;transition:transform .3s var(--ease)}
-.value:hover .ico-sword{animation:swordWiggle .55s var(--ease)}
-@keyframes swordWiggle{0%,100%{transform:rotate(0)}30%{transform:rotate(-8deg) translateY(-1px)}65%{transform:rotate(5deg)}}
+/* ===== Animations des icônes au survol (desktop) ===== */
+/* Prestations */
+.ico-sword,.ico-robot{transform-origin:center}
+.ico-chest .lid{transform-box:view-box;transform-origin:12px 11px;transition:transform .5s var(--ease)}
+.value:hover .ico-chest .lid{transform:translateY(-5px) rotate(-20deg)}
+.ico-compass .needle{transform-box:view-box;transform-origin:12px 12px}
+.value:hover .ico-compass .needle{animation:ic-spin 1s var(--ease)}
+.ico-robot .antenna{transform-box:view-box;transform-origin:12px 8px}
+.value:hover .ico-robot{animation:ic-bob .7s var(--ease)}
+.value:hover .ico-robot .antenna{animation:ic-wiggle .7s var(--ease)}
+.value:hover .ico-sword{animation:ic-slash .7s var(--ease)}
+/* Valeurs : d20, bannière, torche, écu */
+#valeurs .values .value .vic svg{transform-origin:center}
+#valeurs .values .value:nth-child(1):hover .vic svg{animation:ic-roll .85s var(--ease)}
+#valeurs .values .value:nth-child(2):hover .vic svg{animation:ic-wave .8s var(--ease)}
+#valeurs .values .value:nth-child(3):hover .vic svg{animation:ic-flicker .7s var(--ease)}
+#valeurs .values .value:nth-child(4):hover .vic svg{animation:ic-pulse .65s var(--ease)}
+/* Faits : parchemin, sceau, grimoire, carte */
+#asso .facts .fact .ic svg{transform-origin:center}
+#asso .facts .fact:nth-child(1):hover .ic svg{animation:ic-bob .75s var(--ease)}
+#asso .facts .fact:nth-child(2):hover .ic svg{animation:ic-stamp .6s var(--ease)}
+#asso .facts .fact:nth-child(3):hover .ic svg{animation:ic-tilt .75s var(--ease)}
+#asso .facts .fact:nth-child(4):hover .ic svg{animation:ic-unfold .65s var(--ease)}
+
+@keyframes ic-slash{0%{transform:rotate(0)}25%{transform:rotate(-22deg) translateY(-2px)}55%{transform:rotate(15deg)}80%{transform:rotate(-5deg)}100%{transform:rotate(0)}}
+@keyframes ic-spin{0%{transform:rotate(0)}70%{transform:rotate(385deg)}100%{transform:rotate(360deg)}}
+@keyframes ic-bob{0%,100%{transform:translateY(0) rotate(0)}35%{transform:translateY(-3px) rotate(-4deg)}70%{transform:translateY(0) rotate(4deg)}}
+@keyframes ic-wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-22deg)}55%{transform:rotate(16deg)}}
+@keyframes ic-roll{0%{transform:rotate(0) scale(1)}50%{transform:rotate(200deg) scale(1.12)}100%{transform:rotate(360deg) scale(1)}}
+@keyframes ic-wave{0%,100%{transform:rotate(0)}30%{transform:rotate(-7deg)}65%{transform:rotate(5deg)}}
+@keyframes ic-flicker{0%,100%{transform:scale(1) rotate(0)}20%{transform:scale(1.1) translateY(-1px) rotate(-3deg)}45%{transform:scale(.96) rotate(3deg)}70%{transform:scale(1.05) rotate(-1deg)}}
+@keyframes ic-pulse{0%{transform:scale(1) rotate(0)}40%{transform:scale(1.14) rotate(-5deg)}70%{transform:scale(.97) rotate(3deg)}100%{transform:scale(1)}}
+@keyframes ic-stamp{0%{transform:scale(1)}30%{transform:scale(.82)}55%{transform:scale(1.1)}80%{transform:scale(.97)}100%{transform:scale(1)}}
+@keyframes ic-tilt{0%,100%{transform:rotate(0)}40%{transform:rotate(-8deg) translateY(-1px)}70%{transform:rotate(5deg)}}
+@keyframes ic-unfold{0%{transform:scaleX(1)}45%{transform:scaleX(1.1) skewX(-4deg)}100%{transform:scaleX(1)}}
 @media (prefers-reduced-motion:reduce){
-  .value:hover .ico-compass .needle,.value:hover .ico-chest .lid,.value:hover .ico-robot .antenna{transform:none}
-  .value:hover .ico-sword{animation:none}
+  .value:hover svg,.value:hover .lid,#valeurs .value:hover .vic svg,#asso .fact:hover .ic svg{animation:none!important;transition:none!important}
 }
 
 /* =========================================================
    SECTION FRAME
    ========================================================= */
-section{position:relative;padding-block:clamp(3.5rem,7vw,6rem)}
+section{position:relative;padding-block:clamp(2.5rem,4.5vw,4rem)}
 .sec-head{max-width:62ch}
 .sec-head h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:.7rem 0 0}
 .sec-head p{color:var(--muted);font-size:1.08rem;margin:.9rem 0 0;font-weight:300}
 .sec-head.center{margin-inline:auto;text-align:center}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);border:0;margin:0}
+/* Séparateur héraldique (fleuron façon enluminure) */
+.ornament{display:flex;align-items:center;justify-content:center;gap:1.1rem;max-width:660px;margin:-.6rem auto;padding:0 1.5rem;color:var(--silver-deep)}
+.ornament svg{width:54px;height:auto;flex:none;opacity:.85}
+.ornament .o-l{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--line))}
+.ornament .o-l:last-child{background:linear-gradient(90deg,var(--line),transparent)}
+/* Glossaire : étiquette-parchemin au survol d'un terme de jargon */
+.gloss{text-decoration:underline dotted var(--silver);text-underline-offset:3px;text-decoration-thickness:1px;cursor:help;position:relative}
+.gloss::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);translate:-50% 4px;width:max-content;max-width:240px;white-space:normal;
+  font-family:"UR Serif",serif;font-size:.8rem;font-weight:400;line-height:1.45;letter-spacing:normal;text-transform:none;color:var(--parch);
+  background:linear-gradient(180deg,var(--panel-2),var(--ink-2));border:1px solid var(--line);border-radius:10px;padding:.6em .8em;box-shadow:var(--shadow);
+  opacity:0;pointer-events:none;transition:opacity .22s ease,translate .22s ease;z-index:40}
+.gloss:hover::after,.gloss:focus-visible::after{opacity:1;translate:-50% 0}
+@media (hover:none){.gloss::after{display:none}}
 
 /* MANIFESTO ------------------------------------------------------- */
 .manifesto{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,4vw,3.5rem);align-items:start}
@@ -698,21 +735,21 @@ footer.site li a:hover{color:var(--silver-bright)}
         <p class="intro">L'Union des Rôlistes rassemble et fédère associations, clubs, boutiques, auteurs indépendants et rôlistes isolés autour de projets et d'objectifs communs.</p>
         <p>Notre but : favoriser la découverte et le loisir ludique, et faire vivre le jeu de rôle sous toutes ses formes. L'Union n'a pas vocation à supplanter les structures existantes ni à s'immiscer dans leur fonctionnement&nbsp;: nous proposons des <b>actions coordonnées</b> et nous favorisons le dialogue entre passionnés.</p>
         <blockquote class="pull">« Améliorer l'image du jeu de rôle auprès du grand public, et offrir un lieu safe et neutre, quels que soient votre genre, votre neuroatypie, vos origines, votre religion ou vos idéaux. »</blockquote>
-        <p>Née comme collectif en août 2016, l'Union des Rôlistes est aujourd'hui une association loi 1901, déclarée le 11 mai 2019 et enregistrée à l'INSEE le 29 avril 2019, et agit en collaboration avec la FédéGN.</p>
+        <p>Née comme collectif en août 2016, l'Union des Rôlistes est aujourd'hui une association loi 1901, déclarée le 11 mai 2019 et enregistrée à l'INSEE le 29 avril 2019, et agit en collaboration avec la <span class="gloss" tabindex="0" data-tip="Fédération française de Grandeur Nature : le jeu de rôle « grandeur nature », où l'on incarne son personnage en costume et en décor réel.">FédéGN</span>.</p>
       </div>
 
       <div class="facts" data-reveal data-d="2">
         <div class="fact">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a2 2 0 0 1 2 2 2 2 0 0 1-2 2H9v10a2 2 0 0 1-2 2 2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M9 8V6a2 2 0 0 0-4 0M11 11.5h5M11 14.5h5"/></svg></span>
-          <div><div class="k">Association loi 1901</div><div class="v">Déclarée le 11/05/2019, à but non lucratif</div></div>
+          <div><div class="k">Association <span class="gloss" tabindex="0" data-tip="Cadre juridique des associations à but non lucratif en France (loi du 1ᵉʳ juillet 1901).">loi 1901</span></div><div class="v">Déclarée le 11/05/2019, à but non lucratif</div></div>
         </div>
         <div class="fact">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9.5" r="5"/><path d="m9 13.8-1.3 7 4.3-2.4 4.3 2.4-1.3-7"/><path d="m10 9.5 1.4 1.4L14.5 8"/></svg></span>
-          <div><div class="k">Enregistrée à l'INSEE</div><div class="v">Le 29/04/2019 · SIRET 850 580 663</div></div>
+          <div><div class="k">Enregistrée à l'<span class="gloss" tabindex="0" data-tip="Institut national de la statistique : il immatricule l'association et lui attribue son n° SIRET.">INSEE</span></div><div class="v">Le 29/04/2019 · SIRET 850 580 663</div></div>
         </div>
         <div class="fact">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h11a1.5 1.5 0 0 1 1.5 1.5v13.5H6.5A1.5 1.5 0 0 1 5 18z"/><path d="M5 18a1.5 1.5 0 0 1 1.5-1.5h11M9 9h5"/></svg></span>
-          <div><div class="k">RNA W751252183</div><div class="v">Registre national des associations</div></div>
+          <div><div class="k"><span class="gloss" tabindex="0" data-tip="Répertoire National des Associations : l'identifiant officiel de toute association déclarée.">RNA</span> W751252183</div><div class="v">Registre national des associations</div></div>
         </div>
         <div class="fact">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 9 4l6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span>
@@ -808,7 +845,10 @@ footer.site li a:hover{color:var(--silver-bright)}
 </section>
 
 <!-- ============ NOUS SOUTENIR ============ -->
+<div class="ornament" aria-hidden="true"><span class="o-l"></span><svg viewBox="0 0 48 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 2l3.5 6-3.5 6-3.5-6z"/><path d="M20.5 8h-6M14.5 8c-2-2.2-4.2-2.2-6.5 0M14.5 8c-2 2.2-4.2 2.2-6.5 0M27.5 8h6M33.5 8c2-2.2 4.2-2.2 6.5 0M33.5 8c2 2.2 4.2 2.2 6.5 0"/></svg><span class="o-l"></span></div>
+
 <section id="soutenir">
+  <div class="secret" style="top:24%;left:4%"><svg class="shape" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><circle cx="14" cy="14" r="12"/><path d="M14 3v22M3 14h22M7 7l14 14M21 7 7 21"/></svg><span class="spark" style="animation-delay:-8s;animation-duration:10s"></span></div>
   <div class="wrap">
     <div class="sec-head center" data-reveal>
       <span class="eyebrow center">Nous soutenir</span>
