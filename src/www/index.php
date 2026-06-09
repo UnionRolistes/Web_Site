@@ -10,7 +10,8 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
 <meta name="keywords" content="jeu de rôle, JDR, association rôliste, loi 1901, D&D, Pathfinder, Warhammer, rôlistes, communauté Discord">
 <meta name="author" content="Association Union des Rôlistes & Co.">
 <meta name="theme-color" content="#0e0f12">
-<link rel="canonical" href="http://51.158.78.228/union-rolistes/">
+<link rel="canonical" href="https://site.unionrolistes.fr/">
+<meta name="robots" content="index, follow">
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="L'Union des Rôlistes">
@@ -18,14 +19,18 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
 <meta property="og:description" content="Fédérer, promouvoir et soutenir le jeu de rôle sous toutes ses formes. Association loi 1901, un lieu safe et neutre pour tous les rôlistes.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:url" content="http://51.158.78.228/union-rolistes/">
-<meta property="og:image" content="http://51.158.78.228/union-rolistes/img/hydre.png">
+<meta property="og:url" content="https://site.unionrolistes.fr/">
+<meta property="og:image" content="https://site.unionrolistes.fr/img/hydre.png">
+<meta property="og:image:alt" content="Blason de l'Union des Rôlistes : une hydre à trois têtes lançant un dé à 20 faces">
+<meta property="og:image:width" content="768">
+<meta property="og:image:height" content="1059">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@URolistes">
 <meta name="twitter:title" content="L'Union des Rôlistes">
 <meta name="twitter:description" content="Fédérer, promouvoir et soutenir le jeu de rôle sous toutes ses formes. Association loi 1901.">
-<meta name="twitter:image" content="http://51.158.78.228/union-rolistes/img/hydre.png">
+<meta name="twitter:image" content="https://site.unionrolistes.fr/img/hydre.png">
+<meta name="twitter:image:alt" content="Blason de l'Union des Rôlistes : une hydre à trois têtes lançant un dé à 20 faces">
 
 <script type="application/ld+json">
 {
@@ -33,8 +38,8 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail
   "@type": "NGO",
   "name": "L'Union des Rôlistes",
   "alternateName": "Union des Rôlistes & Co.",
-  "url": "http://51.158.78.228/union-rolistes/",
-  "logo": "http://51.158.78.228/union-rolistes/img/hydre.png",
+  "url": "https://site.unionrolistes.fr/",
+  "logo": "https://site.unionrolistes.fr/img/hydre.png",
   "description": "Association loi 1901 qui fédère rôlistes, clubs, boutiques et auteurs autour du jeu de rôle.",
   "foundingDate": "2016",
   "email": "contact.unionrolistes@gmail.com",
@@ -759,7 +764,7 @@ footer.site li a:hover{color:var(--silver-bright)}
         © 2016–2026 Association Union des Rôlistes &amp; Co. · SIRET 850 580 663 · RNA W751252183<br>
         Contenu sous licence Creative Commons BY-NC-SA 4.0. Nous contacter pour toute dérogation.
       </small>
-      <a class="cc" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener" title="CC BY-NC-SA 4.0">
+      <a class="cc" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener" title="CC BY-NC-SA 4.0">
         <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="">
         <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="">
         <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="">

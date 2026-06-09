@@ -2,6 +2,7 @@
     * Refonte graphique globale : nouvelle one-page (charte enluminee, Cinzel + Spectral, animations)
     * Palette noir / argent / gris (suppression du dore)
     * Page autonome : anciens includes pages/ et feuilles css/ retires (#15)
+    * SEO : canonical/OG/Twitter/JSON-LD vers le domaine de prod HTTPS, balises og:image + robots ; tous les liens en https (anti mixed-content)
 
 - Changelog for v0.2.5 (2022-02-04)
     * correction du readme
