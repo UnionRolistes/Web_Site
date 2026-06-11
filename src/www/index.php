@@ -1,5 +1,5 @@
-<!--L'Union des Rolistes (c) 2016 "Association Union des Rolistes & Co." - licensed under CC BY-NC-SA 4.0
-https://creativecommons.org/licenses/by-nc-sa/4.0/ - contact.unionrolistes@gmail.com-->
+<!--L'Union des Rolistes (c) 2016 "Association Union des Rolistes & Co." - licensed under CC BY-NC-ND 4.0
+https://creativecommons.org/licenses/by-nc-nd/4.0/ - contact.unionrolistes@gmail.com-->
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -150,7 +150,7 @@ html[data-theme="light"] .dice-pop.fail{border-color:rgba(199,55,55,.45)}
 html[data-theme="light"] .dice-pop.fail .pl{color:#c93636}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:2rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .skip-link{position:absolute;left:8px;top:-56px;z-index:100;background:var(--ink-2);color:var(--cream);border:1px solid var(--line);padding:.55em 1.1em;border-radius:8px;font-family:"UR Serif",serif;font-size:.9rem;transition:top .2s}
 .skip-link:focus{top:8px}
@@ -661,8 +661,8 @@ footer.site li a:hover{color:var(--silver-bright)}
       <li><a href="#asso">À propos</a></li>
       <li><a href="#valeurs">Nos valeurs</a></li>
       <li><a href="#prestations">Prestations</a></li>
-      <li><a href="#partenaires">Partenaires</a></li>
       <li><a href="#soutenir">Nous soutenir</a></li>
+      <li><a href="#partenaires">Partenaires</a></li>
       <li><a href="#discord">Communauté</a></li>
     </ul>
     </nav>
@@ -1001,8 +1001,8 @@ footer.site li a:hover{color:var(--silver-bright)}
           <li><a href="#asso">Qui sommes-nous</a></li>
           <li><a href="#valeurs">Nos valeurs</a></li>
           <li><a href="#prestations">Prestations</a></li>
-          <li><a href="#partenaires">Partenaires</a></li>
           <li><a href="#soutenir">Nous soutenir</a></li>
+          <li><a href="#partenaires">Partenaires</a></li>
         </ul>
       </div>
       <div>
@@ -1019,14 +1019,14 @@ footer.site li a:hover{color:var(--silver-bright)}
     <div class="legal">
       <small>
         © 2016–2026 Association Union des Rôlistes &amp; Co. · SIRET 850 580 663 · RNA W751252183<br>
-        Contenu sous licence Creative Commons BY-NC-SA 4.0. Nous contacter pour toute dérogation.<br>
+        Contenu sous licence Creative Commons BY-NC-ND 4.0. Nous contacter pour toute dérogation.<br>
         Site réalisé par <a href="https://web-developpeur.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">ohugonnot</a>.
       </small>
-      <a class="cc" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener" title="CC BY-NC-SA 4.0">
+      <a class="cc" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="license noopener" title="CC BY-NC-ND 4.0">
         <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" aria-hidden="true" loading="lazy">
         <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" aria-hidden="true" loading="lazy">
         <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" aria-hidden="true" loading="lazy">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" aria-hidden="true" loading="lazy">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" aria-hidden="true" loading="lazy">
       </a>
     </div>
   </div>
