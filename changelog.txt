@@ -1,3 +1,10 @@
+- Changelog for v0.4.1 (2026-06-11)
+    * Securite vhost Apache : retrait de ExecCGI/AddHandler cgi-script, Includes, Indexes et MultiViews ; AllowOverride None ; acces au dossier .git bloque
+    * Menu : ordre "Nous soutenir" / "Partenaires" aligne sur l'ordre reel des sections (nav et footer) ; scroll-padding pour decoller les ancres du bord
+    * Credits : ajout de @ohugonnot (refonte 2026) dans credit.txt
+    * README a jour : one-page autonome, lancement local (php -S / Docker), installation prod
+    * Licence : passage de CC BY-NC-SA 4.0 a CC BY-NC-ND 4.0 (copie ok, modification interdite) — LICENSE.md, en-tete, footer et credit.txt
+
 - Changelog for v0.4.0 (2026-06-10)
     * Effets rolistes : animations d'icones au survol, lettrine enluminee, separateurs heraldiques, braises flottantes en fond
     * Blason interactif : jet de des d100 (critique <=5 / echec >=96), halo argente de l'hydre au survol, secrets caches reveles a la "torche" du curseur (code "hydre" pour tout reveler)
