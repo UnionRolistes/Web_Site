@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: web-site
+    container_name: web-site
+    restart: unless-stopped
+    ports:
+      - "8081:80"
