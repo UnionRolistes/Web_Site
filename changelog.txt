@@ -1,3 +1,32 @@
+- Changelog for v0.4.1 (2026-06-11)
+    * Securite vhost Apache : retrait de ExecCGI/AddHandler cgi-script, Includes, Indexes et MultiViews ; AllowOverride None ; acces au dossier .git bloque
+    * Menu : ordre "Nous soutenir" / "Partenaires" aligne sur l'ordre reel des sections (nav et footer) ; scroll-padding pour decoller les ancres du bord
+    * Credits : ajout de @ohugonnot (refonte 2026) dans credit.txt
+    * README a jour : one-page autonome, lancement local (php -S / Docker), installation prod
+    * Licence : passage de CC BY-NC-SA 4.0 a CC BY-NC-ND 4.0 (copie ok, modification interdite) — LICENSE.md, en-tete, footer et credit.txt
+
+- Changelog for v0.4.0 (2026-06-10)
+    * Effets rolistes : animations d'icones au survol, lettrine enluminee, separateurs heraldiques, braises flottantes en fond
+    * Blason interactif : jet de des d100 (critique <=5 / echec >=96), halo argente de l'hydre au survol, secrets caches reveles a la "torche" du curseur (code "hydre" pour tout reveler)
+    * Stats animees facon jet de des (1300+ membres, 9 partenaires) ; glossaire au survol (loi 1901, INSEE, RNA, FedeGN)
+    * Mise en page : menu mobile plein ecran, header sticky, espacement des sections homogene, menu desktop agrandi
+    * Accessibilite : landmarks main/nav, lien d'evitement, navigation clavier (medaillon), aria-live sur le resultat des des, prefers-reduced-motion respecte partout, alt corriges
+    * Conformite marque : suppression des residus chauds (vestiges dores/bruns) -> palette froide stricte
+    * Contraste : texte legal en mode clair remonte au seuil WCAG AA
+    * Performance : preload de la police, loading=lazy et fetchpriority sur les images
+    * Pied de page : credit "Site realise par ohugonnot"
+
+- Changelog for v0.3.0 (2026-06-09)
+    * Refonte graphique globale : nouvelle one-page (charte enluminee, Cinzel + Spectral, animations)
+    * Palette noir / argent / gris (suppression du dore)
+    * Page autonome : anciens includes pages/ et feuilles css/ retires (#15)
+    * SEO : canonical/OG/Twitter/JSON-LD vers le domaine de prod HTTPS, balises og:image + robots ; tous les liens en https (anti mixed-content)
+    * Contenu : chiffres communaute a jour (1300+ membres, 80+ JdR), mention FedeGN ; tuto dons mis a jour pour la page autonome
+    * Polices : bascule sur OldNewspaperTypes (charte UR), self-hostees -> plus de dependance Google Fonts externe
+    * Mode clair / sombre : bascule dans le header, memorisee (localStorage), respect du reglage systeme ; palette claire neutre blanc/gris (#19)
+    * UX/contenu : "UnionRolistes", adresse remplacee par "Siege a Paris (IdF)", icones colorees au survol (coeur rouge / Discord blurple), header mobile repense (Discord en icone, logo seul, burger visible, plus de debordement horizontal)
+    * Trame de fond : hydre du kit en filigrane FIXE (faible opacite), le contenu defile par-dessus
+
 - Changelog for v0.2.5 (2022-02-04)
     * correction du readme
 
