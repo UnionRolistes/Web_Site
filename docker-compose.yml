@@ -4,5 +4,21 @@ services:
     image: web-site
     container_name: web-site
     restart: unless-stopped
+    # Port encore publié pendant la préparation de la bascule Traefik :
+    # Apache en dépend tant que la bascule finale n'a pas eu lieu. Retiré
+    # une fois Apache arrêté (Traefik devient l'unique point d'entrée).
     ports:
       - "8081:80"
+    networks:
+      - default
+      - traefik-public
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.web-site.rule=Host(`site.unionrolistes.fr`)"
+      - "traefik.http.routers.web-site.entrypoints=websecure"
+      - "traefik.http.routers.web-site.tls.certresolver=le"
+      - "traefik.http.services.web-site.loadbalancer.server.port=80"
+
+networks:
+  traefik-public:
+    external: true
