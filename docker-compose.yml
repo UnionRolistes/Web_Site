@@ -4,11 +4,6 @@ services:
     image: web-site
     container_name: web-site
     restart: unless-stopped
-    # Port encore publié pendant la préparation de la bascule Traefik :
-    # Apache en dépend tant que la bascule finale n'a pas eu lieu. Retiré
-    # une fois Apache arrêté (Traefik devient l'unique point d'entrée).
-    ports:
-      - "8081:80"
     networks:
       - default
       - traefik-public
